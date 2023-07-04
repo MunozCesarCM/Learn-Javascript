@@ -4,6 +4,6 @@
 @tailwind components;
 @tailwind utilities;
 
-* {
-  font-family: 'Inconsolata', monospace;
-}
+* { font-family: 'Inconsolata', monospace; }
+*::-webkit-scrollbar { width: 0px; }
+
