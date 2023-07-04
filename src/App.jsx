@@ -3,7 +3,9 @@ import { Route, Routes, useLocation } from 'react-router-dom';
 import Sidebar from './components/Sidebar';
 
 const Home = React.lazy(() => import('./pages/Home'));
+
 const Overview = React.lazy(() => import('./pages/Overview'));
+const Introduction = React.lazy(() => import('./pages/JSBasics/Introduction'));
 
 const App = () => {
   const { pathname } = useLocation();
@@ -14,12 +16,13 @@ const App = () => {
   }, [pathname]);
 
   return (
-    <Suspense fallback={<div className='w-screen h-screen' />}>
+    <Suspense fallback={<div className='bg-[#313855] w-screen h-screen' />}>
       {pathname !== '/' && (<Sidebar />)}
       <section className={pathname !== '/' && 'ml-72'}>
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/overview' element={<Overview />} />
+          <Route path='/javascript-basics/introduction' element={<Introduction />} />
         </Routes>
       </section>
     </Suspense>

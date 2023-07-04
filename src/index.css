@@ -1,9 +1,28 @@
-@import url('https://fonts.googleapis.com/css2?family=Inconsolata&display=swap');
-
+@font-face {
+  font-family: 'Inconsolata';
+  font-style: normal;
+  font-weight: 400;
+  font-stretch: normal;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/inconsolata/v31/QldgNThLqRwH-OJ1UHjlKENVzkWGVkL3GZQmAwLYxYWI2qfdm7Lpp4U8aRo.ttf) format('truetype');
+}
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-* { font-family: 'Inconsolata', monospace; }
-*::-webkit-scrollbar { width: 0px; }
-
+* {
+  font-family: 'Inconsolata', monospace;
+}
+*::-webkit-scrollbar {
+  width: 0px;
+}
+.topic-overview {
+  background-color: #313855;
+  color: white;
+  min-height: 100vh;
+  padding: 4rem;
+}
+.topic-overview article {
+  max-width: 50rem;
+  margin: 0 auto;
+}
+/*# sourceMappingURL=index.css.map */

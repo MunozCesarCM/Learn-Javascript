@@ -14,110 +14,7 @@ import {
 } from 'react-icons/tb';
 import { MdSmartButton } from 'react-icons/md';
 import { RiJavascriptFill } from 'react-icons/ri';
-
-const data = [
-  {
-    label: 'Overview',
-    color: 'text-[#FFCB6B]',
-    icon: 'TbFileFilled',
-  },
-  {
-    label: 'Javascript Basics',
-    icon: 'TbTriangleSquareCircle',
-    color: 'text-[#C3E88D]',
-    children: [
-      'Variables',
-      'Booleans',
-      'Arithmetic Operators',
-      'Strings',
-      'Arrays',
-      'Objects',
-    ],
-  },
-  {
-    label: 'Control Flow',
-    icon: 'TbArrowLeftRight',
-    color: 'text-[#89DDFF]',
-    children: [
-      'Conditionals',
-      'Comparison Operators',
-      'Logical Operators',
-      'Switch Statements',
-      'Exception Handling',
-    ],
-  },
-  {
-    label: 'Loops',
-    icon: 'TbExchange',
-    color: 'text-[#C792EA]',
-    children: [
-      'for Loop',
-      'while Loop',
-      'do-while Loop',
-      'Nested Loops',
-      'Control Statements',
-    ],
-  },
-  {
-    label: 'Functions',
-    icon: 'TbSchema',
-    color: 'text-[#FF5370]',
-    children: [
-      'Introduction',
-      'Parameters',
-      'Function Scope',
-      'Arrow Functions',
-      'Closures',
-    ],
-  },
-  {
-    label: 'Arrays',
-    icon: 'TbBracketsContain',
-    color: 'text-[#FFCB6B]',
-    children: [
-      'Introduction',
-      'Array Methods',
-    ],
-  },
-  {
-    label: 'Objects',
-    icon: 'TbCodeDots',
-    color: 'text-[#C3E88D]',
-    children: [
-      'Introduction',
-      'Properties',
-      'Constructors',
-      'Prototypes',
-      'ES6 Classes',
-    ],
-  },
-  {
-    label: 'Asynchronous JS',
-    icon: 'TbVectorBezier',
-    color: 'text-[#89DDFF]',
-    children: [
-      'Introduction',
-      'Callback Functions',
-      'Promises',
-      'Async / Await',
-      'Fetch API',
-      'Error Handling',
-    ],
-  },
-  {
-    label: 'Javascript DOM',
-    icon: 'TbSitemap',
-    color: 'text-[#C792EA]',
-    children: [
-      'Introduction',
-      'Accessing DOM Elements',
-      'Modifying DOM Elements',
-      'DOM Traversal',
-      'Event Handling',
-      'Creating DOM Elements',
-    ],
-  },
-];
+import { sidebar } from '../constants/sidebar';
 
 function getTitleIcon (name) {
   if ( name === 'TbFileFilled' ) return <TbFileFilled className='icon' />
@@ -133,7 +30,7 @@ function getTitleIcon (name) {
 }
 
 const Sidebar = () => {
-  const [caretStates, setCaretStates] = useState(Array(data.length).fill(false));
+  const [caretStates, setCaretStates] = useState(Array(sidebar.length).fill(false));
   const navigate = useNavigate();
 
   const toggleCaret = (index) => {
@@ -156,7 +53,7 @@ const Sidebar = () => {
         </div>
       </header>
       <ul className='list-none'>
-        {data.map((item, index) => (
+        {sidebar.map((item, index) => (
           <li key={index}>
             <span
               className='my-1 mx-4 p-2 flex justify-between items-center rounded cursor-pointer select-none duration-50 hover:bg-[#313855]'
@@ -184,7 +81,8 @@ const Sidebar = () => {
                     key={childIndex}
                     onClick={() => navigate(`/${item.label.toLowerCase().replaceAll(' ', '-')}/${child.toLowerCase().replaceAll(' ', '-')}`)}
                   >
-                    # {child}
+                    <span className={item.color}># </span>
+                    {child}
                   </li>
                 ))}
               </ul>
