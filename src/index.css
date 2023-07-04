@@ -1,16 +1,22 @@
 @font-face {
-  font-family: 'Inconsolata';
+  font-family: 'Space Mono';
   font-style: normal;
   font-weight: 400;
-  font-stretch: normal;
   font-display: swap;
-  src: url(https://fonts.gstatic.com/s/inconsolata/v31/QldgNThLqRwH-OJ1UHjlKENVzkWGVkL3GZQmAwLYxYWI2qfdm7Lpp4U8aRo.ttf) format('truetype');
+  src: url(https://fonts.gstatic.com/s/spacemono/v13/i7dPIFZifjKcF5UAWdDRUEY.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Space Mono';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/spacemono/v13/i7dMIFZifjKcF5UAWdDRaPpZYFI.ttf) format('truetype');
 }
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 * {
-  font-family: 'Inconsolata', monospace;
+  font-family: 'Space Mono', monospace;
 }
 *::-webkit-scrollbar {
   width: 0px;
@@ -21,8 +27,17 @@
   min-height: 100vh;
   padding: 4rem;
 }
+.topic-overview nav {
+  color: #DDDDDD;
+  margin-bottom: 1rem;
+  font-size: 0.8rem;
+}
 .topic-overview article {
   max-width: 50rem;
   margin: 0 auto;
+}
+.topic-overview h1 {
+  font-size: 2rem;
+  font-weight: 700;
 }
 /*# sourceMappingURL=index.css.map */
