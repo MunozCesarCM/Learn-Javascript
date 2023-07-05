@@ -1,7 +1,7 @@
 import { useState, useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { SiteContext } from '../context/SiteContext';
-import { IoIosArrowForward, IoIosArrowDown } from 'react-icons/io';
+import { IoIosArrowForward, IoIosArrowDown, IoMdPrint } from 'react-icons/io';
 import {
   TbFileFilled,
   TbTriangleSquareCircle,
@@ -17,7 +17,7 @@ import {
 } from 'react-icons/tb';
 import { MdSmartButton } from 'react-icons/md';
 import { RiJavascriptFill } from 'react-icons/ri';
-import { sidebar } from '../constants/sidebar';
+import { sitemap } from '../constants/sitemap';
 
 function getTitleIcon (name) {
   if ( name === 'TbFileFilled' ) return <TbFileFilled className='icon' />
@@ -34,7 +34,7 @@ function getTitleIcon (name) {
 
 const Sidebar = () => {
   const {sidebarActive, setSidebarActive} = useContext(SiteContext);
-  const [caretStates, setCaretStates] = useState(Array(sidebar.length).fill(false));
+  const [caretStates, setCaretStates] = useState(Array(sitemap.length).fill(false));
   const navigate = useNavigate();
 
   const toggleCaret = (index) => {
@@ -45,7 +45,7 @@ const Sidebar = () => {
 
   const handleClick = (item, index, hasChildren) => {
     if (hasChildren) toggleCaret(index);
-    else navigate(`/${item.toLowerCase().replaceAll(' ', '-')}`);
+    else navigate(`/${item}`);
   }
 
   return (
@@ -69,11 +69,11 @@ const Sidebar = () => {
           </div>
         </header>
         <ul className='list-none'>
-          {sidebar.map((item, index) => (
-            <li key={index}>
+          {sitemap.map((item, index) => (
+            <li key={item.id}>
               <span
                 className='my-2.5 mx-4 p-2 flex justify-between items-center rounded cursor-pointer select-none duration-50 hover:bg-terminal-grey'
-                onClick={() => handleClick(item.label, index, item.children !== undefined)}
+                onClick={() => handleClick(item.id, index, item.children !== undefined)}
               >
                 <div className='flex items-center'>
                   <span className={item.color}>
@@ -95,10 +95,10 @@ const Sidebar = () => {
                     <li
                       className='my-2.5 mr-4 ml-12 p-2 rounded cursor-pointer duration-50 hover:bg-terminal-grey'
                       key={childIndex}
-                      onClick={() => navigate(`/${item.label.toLowerCase().replaceAll(' ', '-')}/${child.toLowerCase().replaceAll(' ', '-')}`)}
+                      onClick={() => navigate(`/${item.id}/${child.id}`)}
                     >
                       <span className={item.color}># </span>
-                      {child}
+                      {child.label}
                     </li>
                   ))}
                 </ul>
