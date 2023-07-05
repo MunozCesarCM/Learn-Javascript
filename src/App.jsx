@@ -5,7 +5,9 @@ import Sidebar from './components/Sidebar';
 const Home = React.lazy(() => import('./pages/Home'));
 
 const Overview = React.lazy(() => import('./pages/Overview'));
+
 const Introduction = React.lazy(() => import('./pages/JSBasics/Introduction'));
+const Variables = React.lazy(() => import('./pages/JSBasics/Variables'));
 
 const App = () => {
   const { pathname } = useLocation();
@@ -16,7 +18,7 @@ const App = () => {
   }, [pathname]);
 
   return (
-    <Suspense fallback={<div className='bg-[#313855] w-screen h-screen' />}>
+    <Suspense fallback={<div className='bg-terminal-grey w-screen h-screen' />}>
       {pathname !== '/' && (<Sidebar />)}
       <section className={pathname !== '/' && 'ml-80'}>
         <Routes>
@@ -24,6 +26,7 @@ const App = () => {
           <Route path='/overview' element={<Overview />} />
           <Route path='/javascript-basics/' element={<Navigate to='/javascript-basics/introduction' />} />
           <Route path='/javascript-basics/introduction' element={<Introduction />} />
+          <Route path='/javascript-basics/variables' element={<Variables />} />
         </Routes>
       </section>
     </Suspense>

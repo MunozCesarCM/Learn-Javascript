@@ -33,11 +33,25 @@
   font-size: 0.8rem;
 }
 .topic-overview article {
-  max-width: 50rem;
+  max-width: 48rem;
   margin: 0 auto;
 }
 .topic-overview h1 {
   font-size: 2rem;
   font-weight: 700;
+  margin-bottom: 1rem;
+}
+.topic-overview h2 {
+  margin-top: 2rem;
+}
+.topic-overview p {
+  color: #F0F0F0;
+  line-height: 1.75;
+}
+.topic-overview section {
+  margin: 2em 0;
+}
+.topic-card {
+  position: relative;
 }
 /*# sourceMappingURL=index.css.map */

@@ -45,7 +45,7 @@ export const sidebar = [
   {
     label: 'Functions',
     icon: 'TbSchema',
-    color: 'text-[#FF5370]',
+    color: 'text-terminal-red',
     children: [
       'Introduction',
       'Parameters',

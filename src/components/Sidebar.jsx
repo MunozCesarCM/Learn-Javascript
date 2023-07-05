@@ -45,10 +45,10 @@ const Sidebar = () => {
   }
 
   return (
-    <aside className='bg-[#0F111A] text-neutral-100 h-screen w-80 pb-10 fixed z-20 overflow-y-scroll'>
+    <aside className='bg-terminal-black text-neutral-100 h-screen w-80 pb-10 fixed z-20 overflow-y-scroll'>
       <header className='heading py-4 px-5 h-16 flex justify-between items-center cursor-pointer'>
         <div className='flex items-center' onClick={() => navigate('/')}>
-          <RiJavascriptFill className='text-[#FFCB6B] block w-8 h-8 text-primary' />
+          <RiJavascriptFill className='text-terminal-yellow block w-8 h-8 text-primary' />
           <h1 className='pl-4 text-xl letter-wide font-bold'>Learn Javascript</h1>
         </div>
       </header>
@@ -56,7 +56,7 @@ const Sidebar = () => {
         {sidebar.map((item, index) => (
           <li key={index}>
             <span
-              className='my-2.5 mx-4 p-2 flex justify-between items-center rounded cursor-pointer select-none duration-50 hover:bg-[#313855]'
+              className='my-2.5 mx-4 p-2 flex justify-between items-center rounded cursor-pointer select-none duration-50 hover:bg-terminal-grey'
               onClick={() => handleClick(item.label, index, item.children !== undefined)}
             >
               <div className='flex items-center'>
@@ -77,7 +77,7 @@ const Sidebar = () => {
               <ul className={`list-none text-neutral-200 text-sm ${caretStates[index] ? 'visible' : 'hidden'}`}>
                 {item.children.map((child, childIndex) => (
                   <li
-                    className='my-2.5 mr-4 ml-12 p-2 rounded cursor-pointer duration-50 hover:bg-[#313855]'
+                    className='my-2.5 mr-4 ml-12 p-2 rounded cursor-pointer duration-50 hover:bg-terminal-grey'
                     key={childIndex}
                     onClick={() => navigate(`/${item.label.toLowerCase().replaceAll(' ', '-')}/${child.toLowerCase().replaceAll(' ', '-')}`)}
                   >
