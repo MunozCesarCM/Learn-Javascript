@@ -10,6 +10,9 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@codemirror/lang-javascript": "^6.1.9",
+    "@uiw/codemirror-theme-tokyo-night-storm": "^4.21.7",
+    "@uiw/react-codemirror": "^4.21.7",
     "autoprefixer": "^10.4.14",
     "concurrently": "^8.2.0",
     "less": "^4.1.3",
