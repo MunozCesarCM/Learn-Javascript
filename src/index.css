@@ -21,34 +21,44 @@
 *::-webkit-scrollbar {
   width: 0px;
 }
-.topic-overview {
+.topic-overview,
+.lesson {
   background-color: #313855;
   color: white;
   min-height: 100vh;
   padding: 4rem;
 }
-.topic-overview nav {
+.topic-overview nav,
+.lesson nav {
   color: #DDDDDD;
   margin-bottom: 1rem;
   font-size: 0.8rem;
 }
-.topic-overview article {
+.topic-overview article,
+.lesson article {
   max-width: 48rem;
   margin: 0 auto;
 }
-.topic-overview h1 {
+.topic-overview h1,
+.lesson h1 {
   font-size: 2rem;
   font-weight: 700;
   margin-bottom: 1rem;
 }
-.topic-overview h2 {
+.topic-overview h2,
+.lesson h2 {
   margin-top: 2rem;
 }
-.topic-overview p {
+.topic-overview p,
+.lesson p {
   color: #F0F0F0;
   line-height: 1.75;
 }
-.topic-overview section {
+.topic-overview section,
+.lesson section {
   margin: 2em 0;
+}
+.lesson p {
+  margin-bottom: 1em;
 }
 /*# sourceMappingURL=index.css.map */
