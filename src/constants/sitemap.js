@@ -25,8 +25,8 @@ export const sitemap = [
               type: 'Lesson',
             },
             {
-              id: 'what-do-we-use-javascript-for',
-              label: 'What do we use Javascript for?',
+              id: 'getting-started',
+              label: 'Getting Started',
               type: 'Lesson',
             },
           ],

@@ -21,6 +21,9 @@
 *::-webkit-scrollbar {
   width: 0px;
 }
+body {
+  background-color: #313855;
+}
 .topic-overview,
 .lesson {
   background-color: #313855;
@@ -60,5 +63,14 @@
 }
 .lesson p {
   margin-bottom: 1em;
+}
+.lesson mark {
+  background-color: #6471A6;
+  color: white;
+  padding: 0 0.5rem;
+  border-radius: 0.25rem;
+}
+.lesson #bottom {
+  margin-bottom: 5rem;
 }
 /*# sourceMappingURL=index.css.map */
