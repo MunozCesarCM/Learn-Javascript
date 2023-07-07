@@ -604,10 +604,10 @@
     "@codemirror/state" "^6.0.0"
     "@codemirror/view" "^6.0.0"
 
-"@uiw/codemirror-theme-tokyo-night-storm@^4.21.7":
+"@uiw/codemirror-theme-tokyo-night@^4.21.7":
   version "4.21.7"
-  resolved "https://registry.yarnpkg.com/@uiw/codemirror-theme-tokyo-night-storm/-/codemirror-theme-tokyo-night-storm-4.21.7.tgz#d1bec150d494c3b5c18417e834451bd7f077e4c5"
-  integrity sha512-Vny7V5TmSzJmRBTx2CnVVKnZNth6gHNaBbobzLZE4QX5CDCFH9jOwyPaVLH9U4Vi4TLwvgQy97Q2xAaXmR56QQ==
+  resolved "https://registry.yarnpkg.com/@uiw/codemirror-theme-tokyo-night/-/codemirror-theme-tokyo-night-4.21.7.tgz#59877de7e39c2689246cb24739770dbff4951a68"
+  integrity sha512-LnatJOsIb+5AWP/tv7eGWvmkzZMkpngsHstlOWTgZUKoWGi+s74qKCOdUV4N9uLLYZ240EZYG50caf+681c1cg==
   dependencies:
     "@uiw/codemirror-themes" "4.21.7"
 

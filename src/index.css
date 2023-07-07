@@ -62,13 +62,13 @@ body {
   margin: 2em 0;
 }
 .lesson mark {
-  background-color: #6471A6;
+  background-color: #535F91;
   color: white;
   padding: 0 0.5rem;
   border-radius: 0.25rem;
 }
 .lesson #bottom {
-  margin-bottom: 30vh;
+  padding-bottom: 30vh;
 }
 .cm-editor {
   padding: 1rem;
