@@ -1,7 +1,7 @@
 import CodeMirror from '@uiw/react-codemirror';
 import { javascript } from '@codemirror/lang-javascript';
 import { tokyoNight } from '@uiw/codemirror-theme-tokyo-night';
-import { TbPlayerPlayFilled } from 'react-icons/tb';
+import ExecuteCode from '../components/ExecuteCode';
 import { formatContent } from './formatContent';
 
 export const handleTagContent = (tag) => {
@@ -20,21 +20,7 @@ export const handleTagContent = (tag) => {
     />
   }
   if (tag.type === 'code') {
-    return (
-      <div className='relative'>
-        <CodeMirror
-          className='mb-6'
-          value={tag.content}
-          theme={tokyoNight}
-          extensions={[javascript()]}
-        />
-        <TbPlayerPlayFilled size={40} className='bg-terminal-yellow active:bg-yellow-500 border-2 border-yellow-50 border-opacity-0 hover:border-opacity-100 rounded-full p-1.5 absolute z-50 -right-2 -translate-y-12 cursor-pointer duration-50' />
-        <div className='relative bg-terminal-black text-terminal-white p-4'>
-          <span className='text-slate-500'>{'>'}</span> Run the code above to see your result
-          <span className='fixed text-slate-500 text-xs right-2 bottom-1 select-none'>Console</span>
-        </div>
-      </div>
-    );
+    return <ExecuteCode code={tag.content} />
   }
   return <p className='bg-red-500'>No tag detected</p>
 }
