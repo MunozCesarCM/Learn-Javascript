@@ -52,6 +52,15 @@ export const jsBasicsContent = {
       { type: 'p', content: 'If we want to use this value, all we have to do is use the variable name:', },
       { type: 'code', content: 'let firstName = "Cesar";\n\nconsole.log(firstName);', },
     ],
+    [
+      { type: 'p', content: 'You can use this variable multiple times in your code, and anytime Javascript sees the variable ##firstName##, it\'ll replace it with the value we assigned to it.', },
+      { type: 'p', content: 'This is extremely useful because if you want to change the value of the variable, you only have to do it in one place.', },
+    ],
+    [
+      { type: 'hr', },
+      { type: 'p', content: '**@blue@Example:@@** If we change the variable value from ##Cesar## to ##John##, everywhere we referenced the variable will automatically get changed as well.', },
+      { type: 'code', content: 'let firstName = "John";\n\nconsole.log(firstName);\nconsole.log(firstName);\nconsole.log(firstName);', },
+    ],
   ],
 };
 

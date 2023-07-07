@@ -28,7 +28,7 @@ export const handleTagContent = (tag) => {
           theme={tokyoNight}
           extensions={[javascript()]}
         />
-        <TbPlayerPlayFilled size={40} className='bg-terminal-yellow rounded-full p-1.5 absolute z-50 -right-2 -translate-y-12 cursor-pointer' />
+        <TbPlayerPlayFilled size={40} className='bg-terminal-yellow active:bg-yellow-500 border-2 border-yellow-50 border-opacity-0 hover:border-opacity-100 rounded-full p-1.5 absolute z-50 -right-2 -translate-y-12 cursor-pointer duration-50' />
         <div className='relative bg-terminal-black text-terminal-white p-4'>
           <span className='text-slate-500'>{'>'}</span> Run the code above to see your result
           <span className='fixed text-slate-500 text-xs right-2 bottom-1 select-none'>Console</span>

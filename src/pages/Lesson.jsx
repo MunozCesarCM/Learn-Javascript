@@ -26,32 +26,36 @@ const Lesson = ({ lesson }) => {
   };
 
   return (
-    <main className='lesson'>
-      <article>
-        <Breadcrumb />
-        <h1>{lesson.label}</h1>
-        {lessonContent[lesson.id].map((section, s_id) =>
-          section.map((tag, t_id) => (
-            <section
-              key={`${s_id}${t_id}`}
-              className={`${s_id > index ?
-                'opacity-0 translate-y-20 h-0' :
-                'opacity-100 translate-y-0'}
-                duration-700`}
+    <>
+      <main className='lesson'>
+        <article>
+          <Breadcrumb />
+          <h1>{lesson.label}</h1>
+          {lessonContent[lesson.id].map((section, s_id) =>
+            section.map((tag, t_id) => (
+              <section
+                key={`${s_id}${t_id}`}
+                className={`
+                  ${s_id > index + 1 ? 'h-px' : 'h-full'}
+                  ${s_id > index ? 'translate-y-20 opacity-0' : 'translate-y-0 opacity-100'}
+                  duration-200
+                `}
+
               >
-              {handleTagContent(tag)}
-            </section>
-          ))
-        )}
-      </article>
-      <div id='bottom' ref={bottomPage} />
-      <button
-        onClick={handleContinueClick}
-        className='fixed right-10 bottom-10 bg-terminal-yellow active:bg-yellow-500 text-yellow-800 font-bold px-4 py-2 border-2 border-yellow-50 border-opacity-0 hover:border-opacity-100 rounded duration-50'
-      >
-        {index >= lessonContent[lesson.id].length - 1 ? 'Complete' : 'Continue'}
-      </button>
-    </main>
+                {handleTagContent(tag)}
+              </section>
+            ))
+          )}
+        </article>
+        <button
+          onClick={handleContinueClick}
+          className='fixed right-10 bottom-10 bg-terminal-yellow active:bg-yellow-500 text-yellow-800 font-bold px-4 py-2 border-2 border-yellow-50 border-opacity-0 hover:border-opacity-100 rounded duration-50'
+        >
+          {index >= lessonContent[lesson.id].length - 1 ? 'Complete' : 'Continue'}
+        </button>
+      </main>
+      <div ref={bottomPage} />
+    </>
   );
 };
 
