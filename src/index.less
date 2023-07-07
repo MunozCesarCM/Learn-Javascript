@@ -1,10 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-* { font-family: 'Space Mono', monospace; }
+* { font-family: 'IBM Plex Mono', monospace; }
 *::-webkit-scrollbar { width: 0px; }
 
 body { background-color: #313855; }
@@ -23,7 +23,7 @@ body { background-color: #313855; }
   }
 
   article {
-    max-width: 48rem;
+    max-width: 44rem;
     margin: 0 auto;
   }
 
@@ -48,8 +48,6 @@ body { background-color: #313855; }
 }
 
 .lesson {
-  p { margin-bottom: 1em; }
-
   mark {
     background-color: #6471A6;
     color: white;
@@ -58,6 +56,10 @@ body { background-color: #313855; }
   }
 
   #bottom {
-    margin-bottom: 5rem;
+    margin-bottom: 30vh;
   }
+}
+
+.cm-editor {
+  padding: 1rem;
 }

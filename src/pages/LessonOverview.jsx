@@ -1,7 +1,7 @@
 import Breadcrumb from '../components/Breadcrumb';
 import Card from '../components/Card';
 
-const SectionOverview = ({ section }) => {
+const LessonOverview = ({ section }) => {
   return (
     <main className='topic-overview'>
       <article>
@@ -23,4 +23,4 @@ const SectionOverview = ({ section }) => {
   );
 };
 
-export default SectionOverview;
+export default LessonOverview;

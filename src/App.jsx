@@ -1,7 +1,7 @@
 import React, { useState, useEffect, Suspense } from 'react';
 import { Route, Routes, Navigate, useLocation } from 'react-router-dom';
 import { SiteContext } from './context/SiteContext';
-import SectionOverview from './pages/SectionOverview';
+import LessonOverview from './pages/LessonOverview';
 import Lesson from './pages/Lesson';
 import Sidebar from './components/Sidebar';
 import { sitemap } from './constants/sitemap';
@@ -45,7 +45,7 @@ const App = () => {
                 <Route
                   key={`${main.id}${child.id}`}
                   path={`/${main.id}/${child.id}`}
-                  element={ <SectionOverview section={child} /> }
+                  element={ <LessonOverview section={child} /> }
                 />
 
                 {/* Map every card's route */}
