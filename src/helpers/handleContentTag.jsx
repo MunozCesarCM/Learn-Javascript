@@ -15,6 +15,15 @@ export const handleContentTag = (tag, setSolved, isActive) => {
   if (tag.type === 'p') {
     return <p dangerouslySetInnerHTML={{ __html: formatContent(tag.content)}} />
   }
+  if (tag.type === 'ul') {
+    return (
+      <ul>
+        {tag.children.map((item) => (
+          <li dangerouslySetInnerHTML={{ __html: formatContent(item)}} />
+        ))}
+      </ul>
+    );
+  }
   if (tag.type === 'hr') {
     return <hr className='h-px bg-neutral-400 border-0' />
   }

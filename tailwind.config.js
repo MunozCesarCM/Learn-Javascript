@@ -10,10 +10,10 @@ export default {
         terminal: {
           black: '#1A1B26',
           grey: '#313855',
-          red: '#FF5370',
+          red: '#F7768E',
           yellow: '#FFCB6B',
-          green: '#C3E88D',
-          blue: '#89DDFF',
+          green: '#9ECF6A',
+          blue: '#7AA2F7',
           purple: '#C792EA',
           white: '#C0CAF5',
         }

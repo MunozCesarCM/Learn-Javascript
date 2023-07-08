@@ -78,6 +78,14 @@ body {
 .lesson h3 {
   font-size: 1.5rem;
 }
+.lesson ul {
+  color: #F0F0F0;
+  margin-left: 2rem;
+  list-style-type: disc;
+}
+.lesson ul li {
+  line-height: 1.75;
+}
 .cm-editor {
   padding: 1rem;
 }

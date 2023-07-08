@@ -29,7 +29,7 @@ const Lesson = ({ lesson }) => {
 
   return (
     <>
-      <main className='lesson'>
+      <main className='lesson mb-[10vh]'>
         <article>
           <Breadcrumb />
           <h1>{lesson.label}</h1>
@@ -38,8 +38,8 @@ const Lesson = ({ lesson }) => {
               <section
                 key={`${s_id}${t_id}`}
                 className={`
-                  ${s_id > index + 1 ? 'h-px' : 'h-full'}
-                  ${s_id > index ? 'translate-y-20 opacity-0' : 'translate-y-0 opacity-100'}
+                  ${s_id > index + 1 ? 'hidden' : 'h-full'}
+                  ${s_id > index ? 'translate-y-20 opacity-0 block' : 'translate-y-0 opacity-100'}
                   duration-200
                 `}
 

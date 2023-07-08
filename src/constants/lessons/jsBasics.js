@@ -19,15 +19,15 @@ export const jsBasicsContent = {
   ],
   'basic-grammar': [
     [
-      { type: 'p', content: 'Javascript is **case-sensitive** and uses the Unicode character set. For example, the word Früh could be used as a variable name.', },
+      { type: 'p', content: 'JavaScript is **case-sensitive** and uses the Unicode character set. For example, the word Früh could be used as a variable name.', },
       { type: 'snippet', content: 'const Früh = "foobar";', },
     ],
     [
-      { type: 'p', content: 'But, the variable ##früh## is not the same as ##Früh## because Javascript is case sensitive.', },
+      { type: 'p', content: 'But, the variable ##früh## is not the same as ##Früh## because JavaScript is case sensitive.', },
     ],
     [
       { type: 'hr', },
-      { type: 'p', content: 'In Javascript, instructions are called statements and are separated by semicolons ##;## .', },
+      { type: 'p', content: 'In JavaScript, instructions are called statements and are separated by semicolons ##;## .', },
       { type: 'p', content: 'A semicolon is not necessary after a statement if it is written on its own line. But if more than one statement on a line is desired, then they **must** be separated by semicolons.', },
     ],
     [
@@ -67,7 +67,7 @@ export const jsBasicsContent = {
     ],
     [
       { type: 'code', content: 'let firstName = "Cesar";\n\nconsole.log(firstName);', required: false, },
-      { type: 'p', content: 'You can use this variable multiple times in your code, and anytime Javascript sees the variable ##firstName##, it\'ll replace it with the value we assigned to it.', },
+      { type: 'p', content: 'You can use this variable multiple times in your code, and anytime JavaScript sees the variable ##firstName##, it\'ll replace it with the value we assigned to it.', },
     ],
     [
       { type: 'p', content: 'This is extremely useful because if you want to change the value of the variable, you only have to do it in one place.', },
@@ -85,7 +85,7 @@ export const jsBasicsContent = {
     ],
     [
       { type: 'p', content: 'There are also some strict rules in JavaScript on how you can name variables:', },
-      { type: 'p', content: 'A Javascript variable usually starts with a letter, underscore ##_##, or dollar sign ##$##. Subsequent characters can also be digits ##0 – 9##.',}
+      { type: 'p', content: 'A JavaScript variable usually starts with a letter, underscore ##_##, or dollar sign ##$##. Subsequent characters can also be digits ##0 – 9##.',}
     ],
     [
       { type: 'p', content: 'Because JavaScript is case sensitive, letters include the characters A through Z (uppercase) as well as ##a## through ##z## (lowercase).', },
@@ -94,16 +94,16 @@ export const jsBasicsContent = {
       { type: 'hr', },
       { type: 'p', content: 'Another rule is to not start a variable name with an uppercase letter.', },
       { type: 'snippet', content: 'let Person = "Cesar";', },
-      { type: 'p', content: 'Though this is not illegal to do, it is just that upper case letters are reserved for a specific use case in Javascript Object Oriented Programming.', },
+      { type: 'p', content: 'Though this is not illegal to do, it is just that upper case letters are reserved for a specific use case in JavaScript Object Oriented Programming.', },
     ],
     [
       { type: 'p', content: 'Starting a variable with uppercase are also reserved for constants that we know will never change',},
-      { type: 'snippet', content: 'let PI = 3.1415;', },
+      { type: 'snippet', content: 'let PI = 3.14;', },
       { type: 'p', content: 'We know the value of PI will never change, which makes it a constant and the convention for writing constants is using uppercase.',},
     ],
     [
       { type: 'hr', },
-      { type: 'p', content: 'Writing descriptive variable names When writing Javascript, it is good practice to write our variable names are descriptive.', },
+      { type: 'p', content: 'Writing descriptive variable names When writing JavaScript, it is good practice to write our variable names are descriptive.', },
       { type: 'p', content: 'This helps the code to be more readable and will be easy to understand what the variable does just by reading the name. For example:', },
     ],
     [
@@ -121,17 +121,146 @@ export const jsBasicsContent = {
   'declaring-variables': [
     [
       { type: 'p', content: 'You can declare a variable in two ways:', },
-      { type: 'p', content: '* With the keyword ##var##. For example, ##var x = 42##.' },
-      { type: 'p', content: '* With the keyword ##const## or ##let##. For example, ##let y = 13##.' },
+      { type: 'ul', children:[
+        'With the keyword ##const## or ##let##. For example, ##let y = 13##.',
+        'With the keyword ##var##. For example, ##var x = 42##.',
+      ]},
     ],
     [
-      { type: 'p', content: '##let## and ##const## were both introduced in ES6 so they are modern Javascript while the ##var## keyword is the old way of declaring variables.', },
+      { type: 'p', content: '##let## and ##const## were both introduced in ES6 so they are modern JavaScript while the ##var## keyword is the old way of declaring variables.', },
       { type: 'p', content: 'Let\'s learn the differences and which one to use in which situation:', },
     ],
     [
-      { type: 'h2', content: 'When to use Javascript var?', },
+      { type: 'h2', content: 'When to use JavaScript keywords?', },
+      { type: 'p', content: 'Use the ##let## keyword to declare variables that can change later. For example:', },
+      { type: 'snippet', content: 'let age = 50;\n\nage = 51;', },
+    ],
+    [
+      { type: 'p', content: 'In the code above, we have a variable with a value of 50 which was later changed to 51. This is known as re-assigning a variable or mutating a variable.', },
+      { type: 'p', content: 'So when we need to mutate a variable, ##let## is the perfect use case. This also counts in declaring empty variables.', },
+    ],
+    [
+      { type: 'p', content: 'Declaring empty variables can sometimes be useful in a case where we want to declare all the variables at the top of the file but only assign actual values to them later in the program based on some condition or issue:', },
+      { type: 'snippet', content: 'let age;\n\nage = 30;', },
+    ],
+    [
+      { type: 'hr', },
+      { type: 'p', content: 'The ##const## (constant) keyword is used to declare variables that are not supposed to change at any point in the future.', },
+      { type: 'snippet', content: 'const PI = 3.14;', },
+      { type: 'p', content: 'In math, we know that the value of ##PI## is 3.14... so we use ##const## to declare this variable because it is a constant that cannot be changed.', },
+    ],
+    [
+      { type: 'p', content: 'If we try to use the const keyword to declare a mutable variable, it will give an error in our code. Like so:', },
+      { type: 'code', content: 'const dateOfBirth = 1957;\n\ndateOfBirth = 1958;', required: false, },
+    ],
+    [
+      { type: 'p', content: 'If we run this code, we will get an error because the ##const## keywords cannot be mutated or reassigned a new value.', },
+      { type: 'p', content: 'Now the fact that variables created with the ##const## keywords are immutable, also means that it can not be used to assign empty variables:', },
+      { type: 'snippet', content: 'const job;', },
+    ],
+    [
+      { type: 'h3', content: '##let## or ##const##', },
+      { type: 'p', content: 'Now having talked about the differences between the ##let## and ##const## keywords the question is, which one should we use and in what situation?', },
+      { type: 'p', content: 'It is best practice to use the ##const## keyword by default and only use let when you are really sure that the variable needs to change at some point in the future.', },
+    ],
+    [
+      { type: 'p', content: 'The reason that makes this a good practice is that we want to have as little variable mutations or changes as possible because changing variables introduces a potential to create bugs.', },
+      { type: 'p', content: 'So by default, always use ##const## and if you think the variable will have to change in the future, use ##let##.', },
+    ],
+    [
+      { type: 'hr', },
+      { type: 'p', content: 'In the next lesson we will go over the keyword ##var##.', },
+    ],
+  ],
+  'declaring-variable': [
+    [
+      { type: 'p', content: '**Challenge:** declare a variable so the result is ##30##:', },
+      { type: 'code', content: '\n\nconsole.log(myAge);', required: true, expected: '30' },
+    ],
+  ],
+  'var-keyword': [
+    [
+      { type: 'p', content: 'This was the old way of declaring variables before (ES6) was introduced in 2015.', },
+      { type: 'p', content: 'Even though it is not recommended to use the ##var## keyword in this time, it is still good to understand how it works for legacy reasons because you may see this in older codebases or tutorials online.', },
+    ],
+    [
+      { type: 'code', content: 'var job = "Programmer";\n\njob = "Technical Writer";\nconsole.log(job);', required: false },
+      { type: 'p', content: 'If we run this code, the result will give us ##Technical Writer## because the ##var## keywords accepts mutating of variables', },
+    ],
+    [
+      { type: 'p', content: 'The ##var## keyword might look pretty similar to let on the surface but they are actually very different under the hood which we will dive deeper into in further sections.', },
+      { type: 'hr', },
+      { type: 'p', content: 'It\'s good to know that you can use a variable without using one of the keywords we\'ve talked about:', },
+    ],
+    [
+      { type: 'code', content: 'name = "Cesar";\n\nconsole.log(name);', required: false },
+    ],
+    [
+      { type: 'p', content: 'If we run this code, it will give us the name value of ##Cesar##. In as much as this works, it is a terrible idea and not a good practice.', },
+      { type: 'p', content: 'You should always declare your variables properly using the ##let##, ##const## or ##var## keywords.', },
     ],
   ],
 
+  'types-overview': [
+    [
+      { type: 'p', content: 'In every programming language, values can have different types depending on the type of data we want them to hold.', },
+      { type: 'p', content: 'In JavaScript, every value is either an **object** or **primitive** data type.', },
+    ],
+    [
+      { type: 'p', content: 'The latest ECMAScript standard defines eight data types.', },
+      { type: 'p', content: 'Seven data types that are primitives:', },
+    ],
+    [
+      { type: 'ul', children:[
+        '@green@String@@',
+        '@green@Number@@',
+        '@green@Boolean@@',
+        '@green@undefined@@',
+        '@green@null@@',
+        '@green@Symbol@@',
+        '@green@BigInt@@',
+      ]},
+      { type: 'p', content: 'and the @green@Object@@ data type.', },
+    ],
+    [
+      { type: 'hr', },
+      { type: 'p', content: 'JavaScript is a **dynamically typed** language. It means that a variable doesn\’t associate with a type. In other words, a variable can hold a value of different types. For example:', },
+      { type: 'snippet', content: 'let variable = 123; // variable is a number\nvariable = false;   // variable is now a boolean\nvariable = "Cesar"; // variable is now a string', },
+    ],
+    [
+      { type: 'p', content: 'To get the current type of the value that the variable stores, you use the typeof operator:', },
+      { type: 'code', content: 'let variable = 123;\nconsole.log(typeof(variable)); // "number"\n\nvariable = false;\nconsole.log(typeof(variable)); // "boolean"\n\nvariable = "Cesar";\nconsole.log(typeof(variable)); // "string"', required: false },
+    ],
+  ],
+  'number-type': [
+    [
+      { type: 'p', content: 'JavaScript uses the ##number## type to represent both integer and floating-point numbers.', },
+      { type: 'p', content: 'The following statement declares a variable and initializes its value with an integer:', },
+      { type: 'snippet', content: 'let myNumber = 100;', },
+    ],
+    [
+      { type: 'p', content: 'To represent a floating-point number, you include a decimal point followed by at least one number. For example:', },
+      { type: 'snippet', content: 'let myFloat = 100.05;', },
+    ],
+    [
+      { type: 'hr', },
+      { type: 'p', content: 'JavaScript automatically converts a floating-point number into an integer if the number appears to be a whole number.', },
+      { type: 'p', content: 'The reason is that JavaScript always wants to use less memory since a floating-point value uses twice as much memory as an integer:', },
+      { type: 'snippet', content: 'let price = 200.00 // interpreted as an integer 200', },
+    ],
+    [
+      { type: 'hr', },
+      { type: 'p', content: 'To get the range of the number type, you use ##Number.MIN_VALUE## and ##Number.MAX_VALUE##. For example:', },
+      { type: 'code', content: 'console.log(Number.MAX_VALUE); // 1.7976931348623157e+308\nconsole.log(Number.MIN_VALUE); // 5e-324', required: false, },
+    ],
+    [
+      { type: 'p', content: 'Also, you can use ##Infinity## and ##-Infinity## to represent the infinite number. For example:', },
+      { type: 'code', content: 'console.log(Infinity);\nconsole.log(-Infinity);', required: false, },
+    ],
+    [
+      { type: 'h2', content: '##NaN##', },
+      { type: 'p', content: '##NaN## stands for @green@Not a Number@@. It is a special numeric value that indicates an invalid number. For example, the division of a string by a number returns ##NaN##:', },
+    ],
+  ],
 };
 
