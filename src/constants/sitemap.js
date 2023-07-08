@@ -15,7 +15,7 @@ export const sitemap = [
       {
         id: 'introduction',
         label: 'Introduction',
-        content: 'Welcome to the Javascript Basics section! This section lays the foundation for your Javascript journey. We\'ll guide you through fundamental concepts and you\'ll learn how to store data and work with different types of information. Get ready to embark on your Javascript journey and start building a strong foundation!',
+        content: 'This chapter introduces Javascript and discusses some of its fundamental concepts.',
 
         cards: [
           [
@@ -25,8 +25,8 @@ export const sitemap = [
               type: 'Lesson',
             },
             {
-              id: 'getting-started',
-              label: 'Getting Started',
+              id: 'basic-grammar',
+              label: 'Basic Grammar',
               type: 'Lesson',
             },
           ],
@@ -45,9 +45,9 @@ export const sitemap = [
               type: 'Lesson',
             },
             {
-              id: 'reassign-value-to-variable',
-              label: 'Reassign a value to a variable',
-              type: 'Challenge',
+              id: 'naming-conventions',
+              label: 'Naming Conventions',
+              type: 'Lesson',
             },
             {
               id: 'assign-value-to-variable',
@@ -57,8 +57,8 @@ export const sitemap = [
           ],
           [
             {
-              id: 'comparison-operators',
-              label: 'Comparison Operators',
+              id: 'declaring-variables',
+              label: 'Declaring Variables',
               type: 'Lesson',
             },
           ],

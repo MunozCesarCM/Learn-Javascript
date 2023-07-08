@@ -1,10 +1,10 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import CodeMirror from '@uiw/react-codemirror';
 import { javascript } from '@codemirror/lang-javascript';
 import { tokyoNight } from '@uiw/codemirror-theme-tokyo-night';
 import { TbPlayerPlayFilled } from 'react-icons/tb';
 
-const ExecuteCode = ({ code }) => {
+const ExecuteCode = ({ code, expectedResult, setSolved, isActive, required }) => {
   const [result, setResult] = useState('Run the code above to see your result');
   const [source, setSource] = useState(code);
 
@@ -18,25 +18,35 @@ const ExecuteCode = ({ code }) => {
       // originalConsoleLog.apply(console, arguments); // Invoke the original console.log
     };
 
-    eval(source); // Execute the code
-    console.log(logs); // Output the captured logs
-
     let codeResult = '';
-    for (const index in logs) {
+    try {
+      eval(source); // Execute the code
+      console.log(logs); // Output the captured logs
 
-      // Set results and not arguments
-      if (index < logs.length - 1) {
-        codeResult += logs[index];
+      for (const index in logs) {
 
-        // Add line break if not the last line
-        if (index < logs.length - 2) {
-          codeResult += '<br />';
+        // Set results and not arguments
+        if (index < logs.length - 1) {
+          codeResult += logs[index];
+
+          // Add line break if not the last line
+          if (index < logs.length - 2) {
+            codeResult += '<br />';
+          }
         }
       }
+    } catch (e) {
+      codeResult = `<span class="text-terminal-red">${e}</span>`;
     }
 
     setResult(codeResult);
   }
+
+  useEffect(() => {
+    if (required && isActive) {
+      setSolved(result === expectedResult);
+    }
+  }, [result, isActive]);
 
   return (
     <div className='relative'>
@@ -49,7 +59,7 @@ const ExecuteCode = ({ code }) => {
       />
       <TbPlayerPlayFilled
         size={40}
-        onClick={() => testCode()}
+        onClick={testCode}
         className='bg-terminal-yellow active:bg-yellow-500 border-2 border-yellow-50 border-opacity-0 hover:border-opacity-100 rounded-full p-1.5 absolute z-50 -right-2 -translate-y-12 cursor-pointer duration-50'
       />
       <div className='relative bg-terminal-black text-terminal-white py-4 px-6'>

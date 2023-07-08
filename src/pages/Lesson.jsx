@@ -1,14 +1,16 @@
 import { useState, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Breadcrumb from '../components/Breadcrumb';
-import { handleTagContent } from '../helpers/handleContentTag';
+import { handleContentTag } from '../helpers/handleContentTag';
 
 import { jsBasicsContent } from '../constants/lessons/jsBasics';
 
 
 const Lesson = ({ lesson }) => {
   const lessonContent = jsBasicsContent;
+
   const [index, setIndex] = useState(0);
+  const [currentSolved, setCurrentSolved] = useState(true);
   const navigate = useNavigate();
   const bottomPage = useRef(null);
 
@@ -42,14 +44,21 @@ const Lesson = ({ lesson }) => {
                 `}
 
               >
-                {handleTagContent(tag)}
+                {handleContentTag(tag, setCurrentSolved, s_id === index)}
               </section>
             ))
           )}
         </article>
         <button
-          onClick={handleContinueClick}
-          className='fixed right-10 bottom-10 bg-terminal-yellow active:bg-yellow-500 text-yellow-800 font-bold px-4 py-2 border-2 border-yellow-50 border-opacity-0 hover:border-opacity-100 rounded duration-50'
+          onClick={() => currentSolved ? handleContinueClick() : null}
+          className={`
+            fixed right-10 bottom-10 font-bold px-4 py-2 border-2 border-opacity-0 hover:border-opacity-100 rounded duration-50
+            ${index >= lessonContent[lesson.id].length - 1 && currentSolved ?
+              'bg-terminal-green active:bg-lime-500 text-lime-800 border-lime-50':
+              'bg-terminal-yellow active:bg-yellow-500 text-yellow-800 border-yellow-50'}
+            ${!currentSolved ?
+              'opacity-50 bg-neutral-300 active:bg-neutral-300 text-neutral-500 border-neutral-50 hover:border-opacity-0': ''}
+          `}
         >
           {index >= lessonContent[lesson.id].length - 1 ? 'Complete' : 'Continue'}
         </button>
