@@ -259,7 +259,50 @@ export const jsBasicsContent = {
     ],
     [
       { type: 'h2', content: '##NaN##', },
-      { type: 'p', content: '##NaN## stands for @green@Not a Number@@. It is a special numeric value that indicates an invalid number. For example, the division of a string by a number returns ##NaN##:', },
+      { type: 'p', content: '##NaN## stands for @red@Not a Number@@. It is a special numeric value that indicates an invalid number. For example, the division of a string by a number returns ##NaN##:', },
+      { type: 'code', content: 'console.log("string" / 2); // NaN', required: false, },
+    ],
+    [
+      { type: 'p', content: '##NaN## has two special characteristics:', },
+      { type: 'ul', children:[
+        'Any operation with ##NaN## returns ##NaN##',
+        '##NaN## does not equal any value, including itself',
+      ]},
+    ],
+    [
+      { type: 'p', content: 'Here are some examples:', },
+      { type: 'code', content: 'console.log(NaN / 2); // NaN\nconsole.log(NaN == NaN); // false', required: false, },
+    ],
+  ],
+  'reassign-number': [
+    [
+      { type: 'p', content: '**Challenge:** assign a value to the variable ##number##. The code does not work the way it is. Fix the second line to the result is ##2##.', },
+      { type: 'code', content: 'let number = 1;\nlet number = 2; // Fix me\n\nconsole.log(number);', required: true, expected: '2' },
+    ],
+  ],
+  'string-type': [
+    [
+      { type: 'p', content: 'In JavaScript, a string is a sequence of zero or more characters. A string literal begins and ends with either a single quote ##\'## or a double quote ##"##.', },
+    ],
+    [
+      { type: 'p', content: 'A string that begins with a double quote must end with a double quote. Likewise, a string that begins with a single quote must also end with a single quote:', },
+      { type: 'snippet', content: 'let greeting = \'Hello\';\nlet message = "Bye";', },
+    ],
+    [
+      { type: 'p', content: 'If you want to single quote or double quotes in a literal string, you need to use the backslash to escape it. For example:', },
+      { type: 'snippet', content: 'let message = \'I\\\'m also a valid string\';', },
+    ],
+    [
+      { type: 'h2', content: 'Template Literal', },
+      { type: 'p', content: 'String literals can be specified using single or double quotes, which are treated identically, or using the backtick character ##`##.', },
+      { type: 'p', content: 'This last form specifies a template literal, allowing for multi-line strings:', },
+      { type: 'code', content: 'const sentence = `Hello\nEveryone!\nNice to meet you.`;\n\nconsole.log(sentence);', required: false },
+    ],
+  ],
+  'modify-string': [
+    [
+      { type: 'p', content: '**Challenge:** modify the string so the result is ##I\'m Happy## while using single quotes ##\'##.', },
+      { type: 'code', content: 'const message = "I\'m Happy";\n\nconsole.log(message)', required: true, expected: 'I\'m Happy' },
     ],
   ],
 };

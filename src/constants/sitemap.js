@@ -92,8 +92,18 @@ export const sitemap = [
               type: 'Lesson',
             },
             {
-              id: 'assign-value-to-variable',
-              label: 'Assign a value to a variable',
+              id: 'reassign-number',
+              label: 'Reassign a Number',
+              type: 'Challenge',
+            },
+            {
+              id: 'string-type',
+              label: 'String Data type',
+              type: 'Lesson',
+            },
+            {
+              id: 'modify-string',
+              label: 'Modify a String',
               type: 'Challenge',
             },
           ],
