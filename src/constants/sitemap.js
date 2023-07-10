@@ -111,6 +111,8 @@ export const sitemap = [
               label: 'Reassign a Number',
               type: 'Challenge',
             },
+          ],
+          [
             {
               id: 'string-type',
               label: 'String Data type',
@@ -120,6 +122,50 @@ export const sitemap = [
               id: 'modify-string',
               label: 'Modify a String',
               type: 'Challenge',
+            },
+            {
+              id: 'creating-and-logging',
+              label: 'Creating and Logging',
+              type: 'Challenge',
+            },
+          ],
+          [
+            {
+              id: 'boolean-type',
+              label: 'Boolean Data Type',
+              type: 'Lesson',
+            },
+            {
+              id: 'assign-boolean',
+              label: 'Assign a Boolean',
+              type: 'Challenge',
+            },
+            {
+              id: 'undefined-type',
+              label: 'Undefined Data Type',
+              type: 'Lesson',
+            },
+            {
+              id: 'null-type',
+              label: 'Null Data Type',
+              type: 'Lesson',
+            },
+          ],
+          [
+            {
+              id: 'symbol-type',
+              label: 'Symbol Data Type',
+              type: 'Lesson',
+            },
+            {
+              id: 'bigint-type',
+              label: 'BigInt Data Type',
+              type: 'Lesson',
+            },
+            {
+              id: 'object-type',
+              label: 'Object Data Type',
+              type: 'Lesson',
             },
           ],
         ],

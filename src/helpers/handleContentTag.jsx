@@ -33,6 +33,10 @@ export const handleContentTag = (tag, setSolved, isActive) => {
       value={tag.content}
       theme={tokyoNight}
       extensions={[javascript()]}
+      basicSetup={{
+        foldGutter: false,
+        autocompletion: false,
+      }}
     />
   }
   if (tag.type === 'code') {

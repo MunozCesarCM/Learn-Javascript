@@ -64,7 +64,7 @@ export const jsBasicsContent = {
   'write-hello-world': [
     [
       { type: 'p', content: '**Challenge:** change this code so the result is ##Hello World##:', },
-      { type: 'code', content: 'console.log();', required: true, expected: 'Hello World' },
+      { type: 'code', content: 'console.log();', required: true, expected: 'Hello World', },
     ],
   ],
 
@@ -320,6 +320,76 @@ export const jsBasicsContent = {
     [
       { type: 'p', content: '**Challenge:** modify the string so the result is ##I\'m Happy## while using single quotes ##\'##.', },
       { type: 'code', content: 'const message = "I\'m Happy";\n\nconsole.log(message)', required: true, expected: 'I\'m Happy' },
+    ],
+  ],
+  'creating-and-logging': [
+    [
+      { type: 'p', content: '**Challenge:** create and declare a variable so the result is ##I Love JS##:', },
+      { type: 'code', content: '', required: true, expected: 'I Love JS' },
+    ],
+  ],
+  'boolean-type': [
+    [
+      { type: 'p', content: 'The ##boolean## type has two values: ##true## and ##false##, both written in lowercase.', },
+      { type: 'code', content: 'const completed = true;\n\nconsole.log(completed); // true\nconsole.log(typeof completed); // boolean', required: false, },
+    ],
+    [
+      { type: 'p', content: 'Booleans are mostly used in making decisions and are one of the main types you\'ll use the most.', },
+    ],
+  ],
+  'assign-boolean': [
+    [
+      { type: 'p', content: '**Challenge:** create and declare a ##boolean## so the result is ##true##:', },
+      { type: 'code', content: '', required: true, expected: 'true' },
+    ],
+  ],
+  'undefined-type': [
+    [
+      { type: 'p', content: 'The ##undefined## only has one value: ##undefined##.', },
+      { type: 'p', content: 'By default, when a variable is declared but not initialized, it is assigned the value of ##undefined##:', },
+      { type: 'code', content: 'let name;\n\nconsole.log(name); // undefined\nconsole.log(typeof name); // undefined', required: false, },
+    ],
+    [
+      { type: 'p', content: 'In the example, ##name## is a variable. Since ##name## hasn\'t been initialized, it is assigned the value of ##undefined##.', },
+      { type: 'p', content: 'It\'s important to note that the ##typeof## operator also returns ##undefined## when you call it on a variable that hasn\'t been declared:', },
+      { type: 'code', content: 'console.log(typeof undeclaredVariable); // undefined', required: false, },
+    ],
+  ],
+  'null-type': [
+    [
+      { type: 'p', content: 'The ##null## type is the second data type that also only has one value: ##null##:', },
+      { type: 'code', content: 'let obj = null;\n\nconsole.log(obj); // null\nconsole.log(typeof obj); // object', required: false, },
+    ],
+    [
+      { type: 'hr', },
+      { type: 'p', content: '##typeof null## returns an object. This is a known bug in JavaScript.', },
+      { type: 'p', content: 'A proposal to fix this was proposed but rejected. The reason was that the fix would break a lot of existing sites.', },
+    ],
+    [
+      { type: 'hr', },
+      { type: 'p', content: 'A JavaScript ##null is equal to ##undefined##:', },
+      { type: 'code', content: 'console.log(null == undefined); // true', },
+    ],
+  ],
+  'symbol-type': [
+    [
+      { type: 'p', content: 'JavaScript added the ##symbol## data type in ES6. This data type means that you can have an unique value that cannot be changed.', },
+      { type: 'p', content: 'Note that this data type is not useful to us for now and you\'ll learn more about it in the advanced symbol.', },
+      { type: 'code', content: 'const symbol1 = Symbol(); // create first symbol\nconst symbol2 = Symbol(); // create second symbol\n\nconsole.log(symbol1 == symbol2); // false', },
+    ],
+  ],
+  'bigint-type': [
+    [
+      { type: 'p', content: 'The ##bigint## type represents whole numbers larger that. To create a ##bigint## number, you append the letter ##n## at the end of the number:', },
+      { type: 'code', content: 'let largeNumber = 9007199254740991n\n\nconsole.log(typeof largeNumber); // bigint', },
+      { type: 'p', content: 'Again, this data type is not useful for the moment and you\'ll learn more about it in the advanced bigint section.', },
+    ],
+  ],
+  'object-type': [
+    [
+      { type: 'p', content: 'In JavaScript, an object is a collection of properties, where each property is defined with a ##key## and a ##value##:', },
+      { type: 'snippet', content: 'let person = {\n    firstName: "Cesar",\n    age: 40,\n};', },
+      { type: 'p', content: 'Once again, this data type is not useful for the moment and you\'ll learn more about it in the object section.', },
     ],
   ],
 };

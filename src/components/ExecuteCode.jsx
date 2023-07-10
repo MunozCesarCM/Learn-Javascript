@@ -56,6 +56,10 @@ const ExecuteCode = ({ code, expectedResult, setSolved, isActive, required }) =>
         theme={tokyoNight}
         extensions={[javascript()]}
         onChange={(e) => setSource(e)}
+        basicSetup={{
+          foldGutter: false,
+          autocompletion: false,
+        }}
       />
       <TbPlayerPlayFilled
         size={40}

@@ -39,7 +39,7 @@ body {
 }
 .topic-overview article,
 .lesson article {
-  max-width: 44rem;
+  max-width: 40rem;
   margin: 0 auto;
 }
 .topic-overview h1,
