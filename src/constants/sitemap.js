@@ -29,6 +29,21 @@ export const sitemap = [
               label: 'Basic Grammar',
               type: 'Lesson',
             },
+            {
+              id: 'hello-world',
+              label: 'Hello World',
+              type: 'Lesson',
+            },
+            {
+              id: 'write-hello-world',
+              label: 'Write a "Hello World"',
+              type: 'Challenge',
+            },
+            {
+              id: 'comments',
+              label: 'Comments',
+              type: 'Lesson',
+            },
           ],
         ],
       },

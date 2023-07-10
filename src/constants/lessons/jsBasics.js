@@ -33,8 +33,19 @@ export const jsBasicsContent = {
     [
       { type: 'p', content: 'It is considered best practice, however, to always write a semicolon after a statement, even when it is not strictly needed. This practice reduces the chances of bugs getting into the code.', },
     ],
+  ],
+  'hello-world': [
     [
-      { type: 'h2', content: 'Comments', },
+      { type: 'p', content: 'The “Hello, World!” program is a classic and time-honored tradition in computer programming.' },
+      { type: 'p', content: 'To write the "Hello World" program, we will be using ##console.log()##.' },
+    ],
+    [
+      { type: 'p', content: 'All modern browsers have a web console for debugging. The console.log() method is used to write messages to these consoles. For example:' },
+      { type: 'code', content: 'console.log("Hello World");', required: false, },
+    ],
+  ],
+  'comments': [
+    [
       { type: 'p', content: 'The syntax of comments is the same as in C++ and in many other languages:', },
       { type: 'snippet', content: '// a one line comment\n\n/* this is a longer,\n * multi-line comment\n */', },
     ],
@@ -48,6 +59,12 @@ export const jsBasicsContent = {
     ],
     [
       { type: 'p', content: 'Comments behave like whitespace, and are discarded during script execution.', },
+    ],
+  ],
+  'write-hello-world': [
+    [
+      { type: 'p', content: '**Challenge:** change this code so the result is ##Hello World##:', },
+      { type: 'code', content: 'console.log();', required: true, expected: 'Hello World' },
     ],
   ],
 
