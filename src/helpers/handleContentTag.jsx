@@ -41,11 +41,9 @@ export const handleContentTag = (tag, setSolved, isActive) => {
   }
   if (tag.type === 'code') {
     return <ExecuteCode
-      code={tag.content}
-      expectedResult={tag.expected}
+      codeObject={tag}
       setSolved={setSolved}
       isActive={isActive}
-      required={tag.required}
     />
   }
   return <p className='bg-red-500'>No tag detected</p>

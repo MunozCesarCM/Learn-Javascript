@@ -102,6 +102,11 @@ export const sitemap = [
               type: 'Lesson',
             },
             {
+              id: 'types-of-numbers',
+              label: 'Types of Numbers',
+              type: 'Lesson',
+            },
+            {
               id: 'number-type',
               label: 'Number Data Type',
               type: 'Lesson',
@@ -165,6 +170,94 @@ export const sitemap = [
             {
               id: 'object-type',
               label: 'Object Data Type',
+              type: 'Lesson',
+            },
+          ],
+        ],
+      },
+      {
+        id: 'basic-operators',
+        label: 'Basic Operators',
+        content: 'At this point in the course, we discuss math in JavaScript — how we can use operators and other features to successfully manipulate numbers to do our bidding.',
+
+        cards: [
+          [
+            {
+              id: 'arithmetic-operators',
+              label: 'Arithmetic Operators',
+              type: 'Lesson',
+            },
+            {
+              id: 'operator-precedence',
+              label: 'Operator Precedence',
+              type: 'Lesson',
+            },
+            {
+              id: 'arithmetic-calculations',
+              label: 'Arithmetic Calculations',
+              type: 'Challenge',
+            },
+            {
+              id: 'increment-decrement-operators',
+              label: 'Increment Decrement Operators',
+              type: 'Lesson',
+            },
+          ],
+          [
+            {
+              id: 'assignment-operators',
+              label: 'Assignment Operators',
+              type: 'Lesson',
+            },
+            {
+              id: 'assignment-calculations',
+              label: 'Assignment Calculations',
+              type: 'Challenge',
+            },
+            {
+              id: 'comparison-operators',
+              label: 'Comparison Operators',
+              type: 'Lesson',
+            },
+          ],
+        ],
+      },
+    ],
+  },
+  {
+    id: 'control-flow',
+    label: 'Control Flow',
+    color: 'text-terminal-blue',
+    icon: 'TbArrowLeftRight',
+
+    children: [
+      {
+        id: 'operators',
+        label: 'Operators',
+        content: 'This chapter introduces Javascript and discusses some of its fundamental concepts.',
+
+        cards: [
+          [
+            {
+              id: 'logical-operators',
+              label: 'Logical Operators',
+              type: 'Lesson',
+            },
+            {
+              id: 'conditionals',
+              label: 'Conditionals',
+              type: 'Lesson',
+            },
+          ],
+          [
+            {
+              id: 'strings-arithmetic-operators',
+              label: 'Strings and Arithmetic Operators',
+              type: 'Lesson',
+            },
+            {
+              id: 'strings-comparison-operators',
+              label: 'Strings and Comparison Operators',
               type: 'Lesson',
             },
           ],

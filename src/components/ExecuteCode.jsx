@@ -4,9 +4,9 @@ import { javascript } from '@codemirror/lang-javascript';
 import { tokyoNight } from '@uiw/codemirror-theme-tokyo-night';
 import { TbPlayerPlayFilled } from 'react-icons/tb';
 
-const ExecuteCode = ({ code, expectedResult, setSolved, isActive, required }) => {
+const ExecuteCode = ({ codeObject, setSolved, isActive }) => {
   const [result, setResult] = useState('Run the code above to see your result');
-  const [source, setSource] = useState(code);
+  const [source, setSource] = useState(codeObject.content);
 
   const testCode = () => {
     const logs = [];
@@ -43,8 +43,9 @@ const ExecuteCode = ({ code, expectedResult, setSolved, isActive, required }) =>
   }
 
   useEffect(() => {
-    if (required && isActive) {
-      setSolved(result === expectedResult);
+    if (isActive && codeObject.required) setSolved(false);
+    if (isActive && codeObject.expected == result) {
+      setSolved(true);
     }
   }, [result, isActive]);
 

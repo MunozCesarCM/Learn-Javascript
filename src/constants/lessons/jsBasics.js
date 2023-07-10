@@ -68,7 +68,6 @@ export const jsBasicsContent = {
     ],
   ],
 
-
   'introduction-to-variables': [
     [
       { type: 'p', content: 'A variable is a container to store a piece of data.' },
@@ -249,6 +248,36 @@ export const jsBasicsContent = {
       { type: 'code', content: 'let variable = 123;\nconsole.log(typeof(variable)); // "number"\n\nvariable = false;\nconsole.log(typeof(variable)); // "boolean"\n\nvariable = "Cesar";\nconsole.log(typeof(variable)); // "string"', required: false },
     ],
   ],
+  'types-of-numbers': [
+    [
+      { type: 'p', content: 'In programming, even the decimal number system that we all know so well is more complicated than you might think.', },
+      { type: 'p', content: 'We use different terms to describe different types of decimal numbers:', },
+    ],
+    [
+      { type: 'ul', children:[
+        '**Integers** are floating-point numbers without a fraction. They can either be positive or negative (##10##, ##400##, ##-50##).',
+        '**Floating point numbers** (floats) have decimal points and decimal places (##12.5##, ##-26.3301##).',
+        '**Doubles** are a specific type of floating point number that have greater precision than standard floating point numbers.',
+      ]},
+    ],
+    [
+      { type: 'p', content: 'We even have different types of number systems. Decimal is base 10 (meaning it uses ##0–9## in each column), but we also have things like:', },
+      { type: 'ul', children:[
+        '**Binary** — The lowest level language of computers; ##0## and ##1##.',
+        '**Octal** — Base 8, uses ##0-7## in each column.',
+        '**Hexadecimal** — Base 16, uses ##0-9## and then ##A-F## in each column. You may have encountered these numbers when setting colors in CSS.',
+      ]},
+    ],
+    [
+      { type: 'hr', },
+      { type: 'p', content: 'Before you start to get worried about your brain melting, stop right there!', },
+      { type: 'p', content: 'For a start, we are just going to stick to decimal numbers throughout this course; you\'ll rarely come across a need to start thinking about other types, if ever.', },
+    ],
+    [
+      { type: 'p', content: 'The second bit of good news is that unlike some other programming languages, JavaScript only has one data type for numbers, both integers and decimals (##number##).', },
+      { type: 'p', content: 'This means that whatever type of numbers you are dealing with in JavaScript, you handle them in exactly the same way.', },
+    ],
+  ],
   'number-type': [
     [
       { type: 'p', content: 'JavaScript uses the ##number## type to represent both integer and floating-point numbers.', },
@@ -388,8 +417,199 @@ export const jsBasicsContent = {
   'object-type': [
     [
       { type: 'p', content: 'In JavaScript, an object is a collection of properties, where each property is defined with a ##key## and a ##value##:', },
-      { type: 'snippet', content: 'let person = {\n    firstName: "Cesar",\n    age: 40,\n};', },
+      { type: 'snippet', content: 'let person = {\n  firstName: "Cesar",\n  age: 40,\n};', },
       { type: 'p', content: 'Once again, this data type is not useful for the moment and you\'ll learn more about it in the object section.', },
+    ],
+  ],
+
+  'arithmetic-operators': [
+    [
+      { type: 'p', content: 'Arithmetic operators are the basic operators that we use to do math in JavaScript:', },
+    ],
+    [
+      { type: 'h2', content: 'Addition ##+##', },
+      { type: 'p', content: 'Adds two numbers together.', },
+      { type: 'code', content: 'console.log(2 + 2);', },
+    ],
+    [
+      { type: 'h2', content: 'Subtraction ##-##', },
+      { type: 'p', content: 'Subtracts the right number from the left.', },
+      { type: 'code', content: 'console.log(20 - 15);', },
+    ],
+    [
+      { type: 'h2', content: 'Multiplication ##*##', },
+      { type: 'p', content: 'Multiplies two numbers together.', },
+      { type: 'code', content: 'console.log(3 * 7);', },
+    ],
+    [
+      { type: 'h2', content: 'Division ##/##', },
+      { type: 'p', content: 'Divides the left number by the right.', },
+      { type: 'code', content: 'console.log(10 / 5);', },
+    ],
+    [
+      { type: 'h2', content: 'Remainder ##%##', },
+      { type: 'p', content: '(sometimes called modulo) Returns the remainder left over after you\'ve divided the left number into a number of integer portions equal to the right number.', },
+      { type: 'code', content: 'console.log(8 % 3);', },
+      { type: 'p', content: 'This returns ##2##, as three goes into 8 twice, leaving 2 left over.', },
+    ],
+    [
+      { type: 'h2', content: 'Exponent ##**##', },
+      { type: 'p', content: 'Raises a ##base## number to the ##exponent## power. The ##base## number is multiplied by itself ##exponent## times.', },
+      { type: 'code', content: 'console.log(5 ** 3);', },
+      { type: 'p', content: 'This returns ##125##, which is the same as ##5 * 5 * 5##', },
+    ],
+    [
+      { type: 'hr', },
+      { type: 'p', content: 'You may sometimes see exponents expressed using the older ##Math.pow()## method, which works in a very similar way.', },
+      { type: 'p', content: 'For example, in ##Math.pow(7, 3)##, ##7## is the base and ##3## is the exponent, so the result of the expression is ##343##. ##Math.pow(7, 3)## is equivalent to ##7 ** 3##.', },
+    ],
+  ],
+  'operator-precedence': [
+    [
+      { type: 'p', content: 'Let\'s look at the following example:', },
+      { type: 'code', content: 'console.log(50 + 10 / 8 + 2);', },
+      { type: 'p', content: 'As a human being, you may read this as ##50 + 10 = 60##, then ##8 + 2 = 10##, and finally ##60 / 10 = 6##.', },
+      { type: 'p', content: 'But the browser does ##10 / 8 = 1.25##, then ##50 + 1.25 + 2 = 53.25##.', },
+    ],
+    [
+      { type: 'hr', },
+      { type: 'p', content: 'This is because of operator precedence — some operators are applied before others when calculating the result of a calculation.', },
+      { type: 'p', content: 'Operator precedence in JavaScript is the same as is taught in math classes in school — multiply and divide are always done first, then add and subtract.', },
+      { type: 'p', content: 'The calculation is always evaluated from left to right.', },
+    ],
+    [
+      { type: 'hr', },
+      { type: 'p', content: 'If you want to override operator precedence, you can put parentheses around the parts that you want to be explicitly dealt with first. So to get a result of 6, we could do this:', },
+      { type: 'code', content: 'console.log((50 + 10) / (8 + 2));', },
+    ],
+  ],
+  'arithmetic-calculations': [
+    [
+      { type: 'p', content: '**Challenge:** change the value of the variables so the final result is ##55##:', },
+      { type: 'code', content: 'const num1 = 12;\nconst num2 = 20;\n\nconsole.log(num1 + num1 - num2);', required: true, expected: '55' },
+    ],
+    [
+      { type: 'p', content: '**Challenge:** change the value of the variables so the final result is ##10##:', },
+      { type: 'code', content: 'const num1 = 5;\nconst num2 = 10;\n\nconsole.log((num1 * 2) / num2);', required: true, expected: '10' },
+    ],
+    [
+      { type: 'p', content: '**Challenge:** change the value of the variables so the final result is ##3##:', },
+      { type: 'code', content: 'const num1 = 15;\nconst num2 = 5;\n\nconsole.log(num1 % num2);', required: true, expected: '3' },
+    ],
+    [
+      { type: 'p', content: '**Challenge:** change the value of the variables so the final result is ##16##:', },
+      { type: 'code', content: 'const num1 = 3;\nconst num2 = 4;\n\nconsole.log(num1 ** num2);', required: true, expected: '16' },
+    ],
+  ],
+  'increment-decrement-operators': [
+    [
+      { type: 'p', content: 'Sometimes you\'ll want to repeatedly add or subtract one to or from a numeric variable value. This can be conveniently done using the increment ##++## and decrement ##--## operators:', },
+      { type: 'code', content: 'let number = 10;\nnumber++;\n\nconsole.log(number);', required: false, },
+    ],
+    [
+      { type: 'p', content: 'Note that you can\'t apply these directly to a number, which might seem strange, but we are assigning a variable a new updated value, not operating on the value itself. The following will return an error:', },
+      { type: 'code', content: 'console.log(5++);', required: false, },
+    ],
+    [
+      { type: 'p', content: 'So, you can only increment an existing variable. Try this:', },
+      { type: 'code', content: 'let number = 4;\n\nconsole.log(number++);', required: false, },
+    ],
+    [
+      { type: 'p', content: 'When you do this, you\'ll see a value of 4 returned — this is because the browser returns the current value, then increments the variable.', },
+      { type: 'p', content: 'You can see that it\'s been incremented if you log the variable value again:', },
+      { type: 'code', content: 'let number = 4;\n\nconsole.log(number++);\nconsole.log(number);', required: false, },
+    ],
+    [
+      { type: 'p', content: 'The same is true of ##--## :', },
+      { type: 'code', content: 'let number = 4;\n\nconsole.log(number--);\nconsole.log(number);', required: false, },
+    ],
+    [
+      { type: 'hr', },
+      { type: 'p', content: 'You can make the browser do it the other way round — increment/decrement the variable then return the value — by putting the operator at the start of the variable instead of the end:', },
+      { type: 'code', content: 'let number = 4;\n\nconsole.log(++number);', required: false, },
+    ],
+  ],
+  'assignment-operators': [
+    [
+      { type: 'p', content: 'Assignment operators are operators that assign a value to a variable. We have already used the most basic one, ##=##, loads of times — it assigns the variable on the left the value stated on the right:', },
+      { type: 'code', content: 'let x = 3; // x contains the value 3\nlet y = 4; // y contains the value 4\n\n// x now contains the same value y contains, 4\nx = y;\n\nconsole.log(x); // 4', },
+    ],
+    [
+      { type: 'p', content: 'But there are some more complex types, which provide useful shortcuts to keep your code neater and more efficient. These are the most common:', },
+      { type: 'h2', content: 'Addition Assignment ##+=##', },
+      { type: 'p', content: 'Adds the value on the right to the variable value on the left, then returns the new variable value.', },
+      { type: 'code', content: 'let x = 5;\nx += 5;\n\nconsole.log(x); // 10', },
+    ],
+    [
+      { type: 'h2', content: 'Subtraction Assignment ##-=##', },
+      { type: 'p', content: 'Subtracts the value on the right from the variable value on the left, and returns the new variable value.', },
+      { type: 'code', content: 'let x = 5;\nx -= 2;\n\nconsole.log(x); // 3', },
+    ],
+    [
+      { type: 'h2', content: 'Multiplication Assignment ##*=##', },
+      { type: 'p', content: 'Multiplies the variable value on the left by the value on the right, and returns the new variable value.', },
+      { type: 'code', content: 'let x = 5;\nx *= 3;\n\nconsole.log(x); // 15', },
+    ],
+    [
+      { type: 'h2', content: 'Division Assignment ##/=##', },
+      { type: 'p', content: 'Divides the variable value on the left by the value on the right, and returns the new variable value.', },
+      { type: 'code', content: 'let x = 15;\nx /= 3;\n\nconsole.log(x); // 5', },
+    ],
+    [
+      { type: 'hr', },
+      { type: 'p', content: 'You can also use other variables on the right-hand side of each expression, for example:', },
+      { type: 'code', content: 'let x = 3; // x contains the value 3\nlet y = 4; // y contains the value 4\n\n// x now contains the value 12\nx *= y;\n\nconsole.log(x); // 12', },
+    ],
+  ],
+  'assignment-calculations': [
+    [
+      { type: 'p', content: '**Challenge:** assign the variables a value so the result is ##30##:', },
+      { type: 'code', content: 'let num1 = 0; // Give me a value\nlet num2 = 0; // Give me a value\n\nnum1 += num2;\nconsole.log(num1 + num2);', required: true, expected: '30', },
+    ],
+  ],
+  'comparison-operators': [
+    [
+      { type: 'p', content: 'Sometimes we will want to run ##true## / ##false## tests, then act accordingly depending on the result of that test — to do this we use comparison operators:', },
+    ],
+    [
+      { type: 'h2', content: 'Strict equality ##===##', },
+      { type: 'p', content: 'Tests whether the left and right values are identical to one another.', },
+      { type: 'code', content: 'console.log(5 === (2 + 3)); // true', required: false, },
+    ],
+    [
+      { type: 'h2', content: 'Strict non-equality ##!==##', },
+      { type: 'p', content: 'Tests whether the left and right values are **NOT** identical to one another.', },
+      { type: 'code', content: 'console.log(5 !== (2 + 3)); // false', required: false, },
+    ],
+    [
+      { type: 'h2', content: 'Less than ##<##', },
+      { type: 'p', content: 'Tests whether the left value is smaller than the right one.', },
+      { type: 'code', content: 'console.log(10 < 5); // false', required: false, },
+    ],
+    [
+      { type: 'h2', content: 'Greater than ##>##', },
+      { type: 'p', content: 'Tests whether the left value is greater than the right one.', },
+      { type: 'code', content: 'console.log(10 > 5); // true', required: false, },
+    ],
+    [
+      { type: 'h2', content: 'Less than or equal to ##<=##', },
+      { type: 'p', content: 'Tests whether the left value is smaller than or equal to the right one.', },
+      { type: 'code', content: 'console.log(10 <= 5); // false', required: false, },
+    ],
+    [
+      { type: 'h2', content: 'Greater than or equal to ##>=##', },
+      { type: 'p', content: 'Tests whether the left value is greater than or equal to the right one.', },
+      { type: 'code', content: 'console.log(5 >= 5); // true', required: false, },
+    ],
+    [
+      { type: 'hr', },
+      { type: 'p', content: 'You may see some people using ##==## and ##!=## in their tests for equality and non-equality.', },
+      { type: 'p', content: 'These are valid operators in JavaScript, but they differ from ##===## and ##!==##.', },
+    ],
+    [
+      { type: 'p', content: '##==## and ##!=## test whether the values are the same but not whether the values\' datatypes are the same.', },
+      { type: 'p', content: '##===## and ##!==## test the equality of both the values and their datatypes.', },
+      { type: 'code', content: 'console.log(5 == "5"); // true\nconsole.log(5 === "5"); // false', required: false, },
     ],
   ],
 };
