@@ -29,7 +29,7 @@ const Lesson = ({ lesson }) => {
 
   return (
     <>
-      <main className='lesson mb-[10vh]'>
+      <main className='lesson'>
         <article>
           <Breadcrumb />
           <h1>{lesson.label}</h1>
@@ -52,12 +52,12 @@ const Lesson = ({ lesson }) => {
         <button
           onClick={() => currentSolved ? handleContinueClick() : null}
           className={`
-            fixed right-10 bottom-10 font-bold px-4 py-2 border-2 border-opacity-0 hover:border-opacity-100 rounded duration-50
+            fixed right-10 bottom-10 font-bold px-4 py-2 rounded duration-50 text-white
             ${index >= lessonContent[lesson.id].length - 1 && currentSolved ?
-              'bg-terminal-green active:bg-lime-500 text-lime-800 border-lime-50':
-              'bg-terminal-yellow active:bg-yellow-500 text-yellow-800 border-yellow-50'}
+              'bg-secondary':
+              'bg-primary'}
             ${!currentSolved ?
-              'opacity-50 bg-neutral-300 active:bg-neutral-300 text-neutral-500 border-neutral-50 hover:border-opacity-0': ''}
+              'opacity-50': ''}
           `}
         >
           {index >= lessonContent[lesson.id].length - 1 ? 'Complete' : 'Continue'}

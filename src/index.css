@@ -15,31 +15,77 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+.ayuLight {
+  --color-background: #FFFFFF;
+  --color-foreground: #5C6166;
+  --color-aside: #FCFCFC;
+  --color-bold: #2E3033;
+  --color-border: #5C616620;
+  --color-primary: #0081FF;
+  --color-secondary: #86B300;
+}
+.ayuDark {
+  --color-background: #0D1017;
+  --color-foreground: #BFBDB6;
+  --color-aside: #1E2535;
+  --color-bold: #D2D1CC;
+  --color-border: #BFBDB620;
+  --color-primary: #21A2DC;
+  --color-secondary: #AAD94C;
+}
 * {
   font-family: 'IBM Plex Mono', monospace;
 }
 *::-webkit-scrollbar {
   width: 0px;
 }
-body {
-  background-color: #313855;
+body,
+main {
+  background-color: var(--color-background);
+  color: var(--color-foreground);
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+strong {
+  color: var(--color-bold);
+}
+.bg-primary {
+  background-color: var(--color-primary);
+}
+.bg-secondary {
+  background-color: var(--color-secondary);
+}
+aside {
+  background-color: var(--color-aside);
+  color: var(--color-foreground);
+  border-right: 1px solid var(--color-border);
+}
+.sidebarItem {
+  color: var(--color-bold);
+}
+.sidebarItem:hover {
+  background-color: var(--color-background);
 }
 .topic-overview,
 .lesson {
-  background-color: #313855;
-  color: white;
+  background-color: var(--color-background);
+  color: var(--color-foreground);
   min-height: 100vh;
-  padding: 4rem;
+  padding: 4rem 2rem;
 }
 .topic-overview nav,
 .lesson nav {
-  color: #DDDDDD;
+  color: var(--color-foreground);
   margin-bottom: 1rem;
   font-size: 0.8rem;
 }
 .topic-overview article,
 .lesson article {
-  max-width: 40rem;
+  max-width: 65ch;
   margin: 0 auto;
 }
 .topic-overview h1,
@@ -54,18 +100,20 @@ body {
 }
 .topic-overview p,
 .lesson p {
-  color: #F0F0F0;
+  color: var(--color-foreground);
   line-height: 1.75;
+  padding: 0.5rem 0;
 }
 .topic-overview section,
 .lesson section {
-  margin: 2em 0;
+  padding: 1em 0;
 }
 .lesson mark {
-  background-color: #535F91;
+  background-color: var(--color-primary);
   color: white;
   padding: 0 0.25rem;
   border-radius: 0.25rem;
+  font-size: 0.9em;
 }
 .lesson h2,
 .lesson h3 {
@@ -79,14 +127,24 @@ body {
   font-size: 1.5rem;
 }
 .lesson ul {
-  color: #F0F0F0;
+  color: var(--color-foreground);
   margin-left: 2rem;
   list-style-type: disc;
 }
 .lesson ul li {
   line-height: 1.75;
 }
+.lesson .codeResult {
+  border: 1px solid var(--color-border);
+}
+.lesson .codeResult .consoleText {
+  color: var(--color-foreground);
+}
 .cm-editor {
-  padding: 1rem;
+  padding: 1.5rem 1rem;
+  border: 1px solid var(--color-border);
+}
+.cm-focused {
+  outline: 0px solid black !important;
 }
 /*# sourceMappingURL=index.css.map */

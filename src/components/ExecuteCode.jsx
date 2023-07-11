@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react';
 import CodeMirror from '@uiw/react-codemirror';
 import { javascript } from '@codemirror/lang-javascript';
-import { tokyoNight } from '@uiw/codemirror-theme-tokyo-night';
 import { TbPlayerPlayFilled } from 'react-icons/tb';
+import { getTheme } from '../helpers/getTheme';
 
 const ExecuteCode = ({ codeObject, setSolved, isActive }) => {
   const [result, setResult] = useState('Run the code above to see your result');
@@ -54,7 +54,7 @@ const ExecuteCode = ({ codeObject, setSolved, isActive }) => {
       <CodeMirror
         className='mb-6'
         value={source}
-        theme={tokyoNight}
+        theme={getTheme()}
         extensions={[javascript()]}
         onChange={(e) => setSource(e)}
         basicSetup={{
@@ -65,11 +65,11 @@ const ExecuteCode = ({ codeObject, setSolved, isActive }) => {
       <TbPlayerPlayFilled
         size={40}
         onClick={testCode}
-        className='bg-terminal-yellow active:bg-yellow-500 border-2 border-yellow-50 border-opacity-0 hover:border-opacity-100 rounded-full p-1.5 absolute z-50 -right-2 -translate-y-12 cursor-pointer duration-50'
+        className='bg-primary text-white rounded-full p-2 absolute z-50 -right-2 -translate-y-12 cursor-pointer duration-50'
       />
-      <div className='relative bg-terminal-black text-terminal-white py-4 px-6'>
+      <div className='codeResult relative py-4 px-6'>
         <span dangerouslySetInnerHTML={{ __html: result}} />
-        <span className='fixed text-slate-500 text-xs right-2 bottom-1 select-none'>Console</span>
+        <span className='consoleText fixed text-xs right-2 bottom-5 select-none opacity-50'>Console</span>
       </div>
     </div>
   );

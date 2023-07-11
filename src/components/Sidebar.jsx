@@ -52,19 +52,19 @@ const Sidebar = () => {
     <div className='relative'>
       {sidebarActive ? (
         <TbX
-          className={`fixed ${sidebarActive ? 'left-[20.5rem]' : 'left-4'} top-4 text-white text-xl z-50 cursor-pointer block lg:hidden`}
+          className={`fixed ${sidebarActive ? 'left-[20.5rem]' : 'left-4'} top-4 text-xl z-50 cursor-pointer block lg:hidden`}
           onClick={() => setSidebarActive(!sidebarActive)}
         />
       ) : (
         <TbMenu2
-          className={`fixed ${sidebarActive ? 'left-[20.5rem]' : 'left-4'} top-4 text-white text-xl z-50 cursor-pointer block lg:hidden`}
+          className={`fixed ${sidebarActive ? 'left-[20.5rem]' : 'left-4'} top-4 text-xl z-50 cursor-pointer block lg:hidden`}
           onClick={() => setSidebarActive(!sidebarActive)}
         />
       )}
-      <aside className={`${sidebarActive ? 'block' : 'hidden'} lg:block bg-terminal-black text-neutral-100 h-screen w-80 pb-10 fixed z-20 overflow-y-scroll`}>
+      <aside className={`${sidebarActive ? 'block' : 'hidden'} lg:block h-screen w-80 pb-10 fixed z-20 overflow-y-scroll`}>
         <header className='heading py-4 px-5 h-16 flex justify-between items-center cursor-pointer'>
           <div className='flex items-center' onClick={() => navigate('/')}>
-            <RiJavascriptFill className='text-terminal-yellow block w-8 h-8 text-primary' />
+            <RiJavascriptFill className='text-terminal-yellow block w-8 h-8' />
             <h1 className='pl-4 text-xl letter-wide font-bold'>Learn Javascript</h1>
           </div>
         </header>
@@ -72,7 +72,7 @@ const Sidebar = () => {
           {sitemap.map((item, index) => (
             <li key={item.id}>
               <span
-                className='my-2.5 mx-4 p-2 flex justify-between items-center rounded cursor-pointer select-none duration-50 hover:bg-terminal-grey'
+                className='sidebarItem my-2.5 mx-4 p-2 flex justify-between items-center rounded cursor-pointer select-none duration-50'
                 onClick={() => handleClick(item.id, index, item.children !== undefined)}
               >
                 <div className='flex items-center'>
@@ -90,10 +90,10 @@ const Sidebar = () => {
                   )}
               </span>
               {item.children && (
-                <ul className={`list-none text-neutral-200 text-sm ${caretStates[index] ? 'visible' : 'hidden'}`}>
+                <ul className={`list-none text-sm ${caretStates[index] ? 'visible' : 'hidden'}`}>
                   {item.children.map((child, childIndex) => (
                     <li
-                      className='my-2.5 mr-4 ml-12 p-2 rounded cursor-pointer duration-50 hover:bg-terminal-grey'
+                      className='sidebarItem my-2.5 mr-4 ml-12 p-2 rounded cursor-pointer duration-50'
                       key={childIndex}
                       onClick={() => navigate(`/${item.id}/${child.id}`)}
                     >

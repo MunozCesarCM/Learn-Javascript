@@ -1,8 +1,8 @@
 import CodeMirror from '@uiw/react-codemirror';
 import { javascript } from '@codemirror/lang-javascript';
-import { tokyoNight } from '@uiw/codemirror-theme-tokyo-night';
 import ExecuteCode from '../components/ExecuteCode';
 import { formatContent } from './formatContent';
+import { getTheme } from '../helpers/getTheme';
 
 export const handleContentTag = (tag, setSolved, isActive) => {
 
@@ -18,24 +18,25 @@ export const handleContentTag = (tag, setSolved, isActive) => {
   if (tag.type === 'ul') {
     return (
       <ul>
-        {tag.children.map((item) => (
-          <li dangerouslySetInnerHTML={{ __html: formatContent(item)}} />
+        {tag.children.map((item, index) => (
+          <li key={index} dangerouslySetInnerHTML={{ __html: formatContent(item)}} />
         ))}
       </ul>
     );
   }
   if (tag.type === 'hr') {
-    return <hr className='h-px bg-neutral-400 border-0' />
+    return <hr className='h-px bg-neutral-400 opacity-20 border-0' />
   }
   if (tag.type === 'snippet') {
     return <CodeMirror
       editable={false}
       value={tag.content}
-      theme={tokyoNight}
+      theme={getTheme()}
       extensions={[javascript()]}
       basicSetup={{
         foldGutter: false,
-        autocompletion: false,
+        highlightActiveLine: false,
+        highlightActiveLineGutter: false,
       }}
     />
   }
