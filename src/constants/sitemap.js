@@ -232,20 +232,20 @@ export const sitemap = [
 
     children: [
       {
-        id: 'operators',
-        label: 'Operators',
+        id: 'conditional-operations',
+        label: 'Conditional Operations',
         content: 'This chapter introduces Javascript and discusses some of its fundamental concepts.',
 
         cards: [
           [
             {
-              id: 'logical-operators',
-              label: 'Logical Operators',
+              id: 'conditionals',
+              label: 'Conditionals',
               type: 'Lesson',
             },
             {
-              id: 'conditionals',
-              label: 'Conditionals',
+              id: 'logical-operators',
+              label: 'Logical Operators',
               type: 'Lesson',
             },
           ],

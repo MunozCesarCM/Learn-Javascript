@@ -2,6 +2,7 @@ export const jsBasicsContent = {
   'what-is-javascript': [
     [
       { type: 'p', content: 'JavaScript is a computer language that is commonly used to make websites more interactive and dynamic. It was created in the mid-1990s and has since become an essential part of web development.', },
+      { type: 'code', content: 'export class Groups extends APIModule {\n  info = (group: string) =>\n}\n\n// This is a comment\n\nvar myVar = \'string\';\nvar myNum = 42;\nvar myBool = true;\nvar myNull = null;\n\nif (myVar === \'string\') {\n  console.log(\'This is a string\');\n} else {\n  console.log(\'This is not a string\');\n}\n\nvar sum = myNum + 5;\nvar product = myNum * 2;\nconsole.log(sum, product);\n\nvar myObj = {\n  attribute1: \'value1\',\n  attribute2: \'value2\'\n};\n\nconsole.log(myObj.attribute1);', },
     ],
     [
       { type: 'p', content: 'When you visit a website and click on buttons, see animations, or fill out forms, JavaScript is often responsible for making those things happen.', },
