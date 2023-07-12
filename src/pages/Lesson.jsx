@@ -52,7 +52,8 @@ const Lesson = ({ lesson }) => {
         <button
           onClick={() => currentSolved ? handleContinueClick() : null}
           className={`
-            fixed right-10 bottom-10 font-bold px-4 py-2 rounded duration-50 text-white
+            fixed right-10 bottom-10 font-bold px-4 py-2.5 rounded duration-50 text-white
+            hover:brightness-95 active:brightness-90
             ${index >= lessonContent[lesson.id].length - 1 && currentSolved ?
               'bg-secondary':
               'bg-primary'}

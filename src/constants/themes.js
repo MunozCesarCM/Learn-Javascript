@@ -48,3 +48,27 @@ export const ayuDark = createTheme({
     { tag: t.operator, color: '#F29668' },
   ],
 });
+
+export const gruvbox = createTheme({
+  theme: 'dark',
+  settings: {
+    background: '#282828',
+    foreground: '#EBDBB2',
+    caret: '#DEDEDE',
+    selection: '#409FFF26',
+    selectionMatch: '#6C598026',
+    lineHighlight: '#035BD61a',
+    gutterBackground: '#282828',
+    gutterForeground: '#EBDBB266',
+  },
+  styles: [
+    { tag: t.comment, color: '#92837499' },
+    { tag: t.variableName, color: '#83A598' },
+    { tag: [t.string, t.special(t.brace)], color: '#B8BB26' },
+    { tag: t.number, color: '#D3869B' },
+    { tag: t.bool, color: '#D3869B' },
+    { tag: t.null, color: '#D3869B' },
+    { tag: t.keyword, color: '#FB4934' },
+    { tag: t.operator, color: '#EBDBB2' },
+  ],
+});

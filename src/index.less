@@ -11,17 +11,43 @@
   --color-bold: #2E3033;
   --color-border: #5C616620;
   --color-primary: #0081FF;
+  --color-primary-border: #0081FF19;
   --color-secondary: #86B300;
+  --color-secondary-border: #86B30019;
 }
 
 .ayuDark {
-  --color-background: #0D1017;
+  --color-background: #1E2535;
   --color-foreground: #BFBDB6;
-  --color-aside: #1E2535;
+  --color-aside: #0D1017;
   --color-bold: #D2D1CC;
   --color-border: #BFBDB620;
   --color-primary: #21A2DC;
+  --color-primary-border: #21A2DC19;
   --color-secondary: #AAD94C;
+  --color-secondary-border: #AAD94C19;
+}
+
+.gruvbox {
+  --color-background: #222222;
+  --color-foreground: #EBDBB2;
+  --color-aside: #282828;
+  --color-bold: #F9F5D7;
+  --color-border: #EBDBB220;
+  --color-primary: #458588;
+  --color-primary-border: #45858819;
+  --color-secondary: #98971A;
+  --color-secondary-border: #98971A19;
+}
+
+.border-primary {
+  border: 2px solid var(--color-primary-border);
+  &:hover { border: 2px solid var(--color-primary); }
+}
+
+.border-secondary {
+  border: 2px solid var(--color-secondary-border);
+  &:hover { border: 2px solid var(--color-secondary); }
 }
 
 * { font-family: 'IBM Plex Mono', monospace; }
@@ -35,9 +61,6 @@ body, main {
 h1, h2, h3, h4, h5, h6, strong {
   color: var(--color-bold);
 }
-
-.bg-primary { background-color: var(--color-primary); }
-.bg-secondary { background-color: var(--color-secondary); }
 
 aside {
   background-color: var(--color-aside);
@@ -123,6 +146,7 @@ aside {
   }
 
   .codeResult {
+    color: var(--color-bold);
     border: 1px solid var(--color-border);
 
     .consoleText {

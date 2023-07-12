@@ -3,6 +3,7 @@ import { SiteContext } from '../context/SiteContext';
 import {
   ayuLight,
   ayuDark,
+  gruvbox,
 } from '../constants/themes';
 
 export const getTheme = () => {
@@ -10,4 +11,5 @@ export const getTheme = () => {
 
   if (theme === 'ayuLight') return ayuLight;
   if (theme === 'ayuDark') return ayuDark;
+  if (theme === 'gruvbox') return gruvbox;
 };

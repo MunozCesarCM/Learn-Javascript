@@ -16,7 +16,9 @@ export default {
           blue: '#7AA2F7',
           purple: '#C792EA',
           white: '#C0CAF5',
-        }
+        },
+        primary: 'var(--color-primary)',
+        secondary: 'var(--color-secondary)',
       }
     },
   },
