@@ -40,6 +40,30 @@
   --color-secondary-border: #98971A19;
 }
 
+.catpuccinLight {
+  --color-background: #ECEEF3;
+  --color-foreground: #4C4F69;
+  --color-aside: #EFF1F5;
+  --color-bold: #3D3F54;
+  --color-border: #4C4F6920;
+  --color-primary: #04A5E5;
+  --color-primary-border: #04A5E519;
+  --color-secondary: #40A02B;
+  --color-secondary-border: #40A02B19;
+}
+
+.catpuccinDark {
+  --color-background: #27273b;
+  --color-foreground: #CDD6F4;
+  --color-aside: #1E1E2E;
+  --color-bold: #D9E0F7;
+  --color-border: #CDD6F420;
+  --color-primary: #89B4FA;
+  --color-primary-border: #89B4FA19;
+  --color-secondary: #A6E3A1;
+  --color-secondary-border: #A6E3A119;
+}
+
 .border-primary {
   border: 2px solid var(--color-primary-border);
   &:hover { border: 2px solid var(--color-primary); }
@@ -146,6 +170,7 @@ aside {
   }
 
   .codeResult {
+    background-color: var(--color-aside);
     color: var(--color-bold);
     border: 1px solid var(--color-border);
 
