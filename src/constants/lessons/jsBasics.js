@@ -91,7 +91,7 @@ export const jsBasicsContent = {
     ],
     [
       { type: 'hr', },
-      { type: 'p', content: '**@blue@Example:@@** If we change the variable value from ##Cesar## to ##John##, everywhere we referenced the variable will automatically get changed as well.', },
+      { type: 'p', content: '**@primary@Example:@@** If we change the variable value from ##Cesar## to ##John##, everywhere we referenced the variable will automatically get changed as well.', },
       { type: 'code', content: 'let firstName = "John";\n\nconsole.log(firstName);\nconsole.log(firstName);\nconsole.log(firstName);', required: false, },
     ],
   ],
@@ -229,15 +229,15 @@ export const jsBasicsContent = {
     ],
     [
       { type: 'ul', children:[
-        '@green@String@@',
-        '@green@Number@@',
-        '@green@Boolean@@',
-        '@green@undefined@@',
-        '@green@null@@',
-        '@green@Symbol@@',
-        '@green@BigInt@@',
+        '@secondary@String@@',
+        '@secondary@Number@@',
+        '@secondary@Boolean@@',
+        '@secondary@undefined@@',
+        '@secondary@null@@',
+        '@secondary@Symbol@@',
+        '@secondary@BigInt@@',
       ]},
-      { type: 'p', content: 'and the @green@Object@@ data type.', },
+      { type: 'p', content: 'and the @secondary@Object@@ data type.', },
     ],
     [
       { type: 'hr', },

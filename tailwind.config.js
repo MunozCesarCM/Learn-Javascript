@@ -19,6 +19,8 @@ export default {
         },
         primary: 'var(--color-primary)',
         secondary: 'var(--color-secondary)',
+        foreground: 'var(--color-foreground)',
+        header: 'var(--color-bold)',
         aside: 'var(--color-aside)',
       }
     },

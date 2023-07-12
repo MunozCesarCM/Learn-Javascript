@@ -12,7 +12,7 @@ const Overview = React.lazy(() => import('./pages/Overview'));
 
 const App = () => {
   const [sidebarActive, setSidebarActive] = useState(window.innerWidth > 1024);
-  const [theme, setTheme] = useState('catpuccinLight');
+  const [theme, setTheme] = useState('ayuLight');
   const { pathname } = useLocation();
 
   useEffect(() => {

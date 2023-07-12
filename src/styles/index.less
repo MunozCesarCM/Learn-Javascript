@@ -7,6 +7,11 @@
 * { font-family: 'IBM Plex Mono', monospace; }
 *::-webkit-scrollbar { width: 0px; }
 
+::selection {
+  color: white;
+  background-color: var(--color-primary);
+}
+
 body, main {
   background-color: var(--color-background);
   color: var(--color-foreground);
@@ -32,8 +37,6 @@ aside {
 
 .topic-overview,
 .lesson {
-
-  //background-color: #313855;
   background-color: var(--color-background);
   color: var(--color-foreground);
   min-height: 100vh;
@@ -90,8 +93,11 @@ aside {
   h3 { font-size: 1.5rem; }
 
   ul {
+    list-style-position: inside;
+    background-color: var(--color-aside);
     color: var(--color-foreground);
-    margin-left: 2rem;
+    border: 1px solid var(--color-border);
+    padding: 1rem 2rem;
     list-style-type: disc;
 
     li {
