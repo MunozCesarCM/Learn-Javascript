@@ -19,6 +19,7 @@ export default {
         },
         primary: 'var(--color-primary)',
         secondary: 'var(--color-secondary)',
+        aside: 'var(--color-aside)',
       }
     },
   },
