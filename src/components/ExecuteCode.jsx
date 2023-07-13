@@ -65,7 +65,7 @@ const ExecuteCode = ({ codeObject, setSolved, isActive }) => {
       <TbPlayerPlayFilled
         size={40}
         onClick={testCode}
-        className='bg-primary text-white rounded-full p-2 absolute z-50 -right-2 -translate-y-12 cursor-pointer duration-50'
+        className='bg-terminal-blue text-white rounded-full p-2 absolute z-50 -right-2 -translate-y-12 cursor-pointer duration-50'
       />
       <div className='codeResult relative py-4 px-6'>
         <span dangerouslySetInnerHTML={{ __html: result}} />

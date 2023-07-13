@@ -91,7 +91,7 @@ export const jsBasicsContent = {
     ],
     [
       { type: 'hr', },
-      { type: 'p', content: '**@primary@Example:@@** If we change the variable value from ##Cesar## to ##John##, everywhere we referenced the variable will automatically get changed as well.', },
+      { type: 'p', content: '**@blue@Example:@@** If we change the variable value from ##Cesar## to ##John##, everywhere we referenced the variable will automatically get changed as well.', },
       { type: 'code', content: 'let firstName = "John";\n\nconsole.log(firstName);\nconsole.log(firstName);\nconsole.log(firstName);', required: false, },
     ],
   ],
@@ -229,15 +229,15 @@ export const jsBasicsContent = {
     ],
     [
       { type: 'ul', children:[
-        '@secondary@String@@',
-        '@secondary@Number@@',
-        '@secondary@Boolean@@',
-        '@secondary@undefined@@',
-        '@secondary@null@@',
-        '@secondary@Symbol@@',
-        '@secondary@BigInt@@',
+        '@green@String@@',
+        '@green@Number@@',
+        '@green@Boolean@@',
+        '@green@undefined@@',
+        '@green@null@@',
+        '@green@Symbol@@',
+        '@green@BigInt@@',
       ]},
-      { type: 'p', content: 'and the @secondary@Object@@ data type.', },
+      { type: 'p', content: 'and the @green@Object@@ data type.', },
     ],
     [
       { type: 'hr', },
@@ -493,6 +493,8 @@ export const jsBasicsContent = {
       { type: 'p', content: '**Challenge:** change the value of the variables so the final result is ##10##:', },
       { type: 'code', content: 'const num1 = 5;\nconst num2 = 10;\n\nconsole.log((num1 * 2) / num2);', required: true, expected: '10' },
     ],
+  ],
+  'even-more-calculations': [
     [
       { type: 'p', content: '**Challenge:** change the value of the variables so the final result is ##3##:', },
       { type: 'code', content: 'const num1 = 15;\nconst num2 = 5;\n\nconsole.log(num1 % num2);', required: true, expected: '3' },

@@ -64,7 +64,7 @@ const Sidebar = () => {
       <aside className={`${sidebarActive ? 'block' : 'hidden'} lg:block h-screen w-80 pb-10 fixed z-20 overflow-y-scroll`}>
         <header className='heading py-4 px-5 h-16 flex justify-between items-center cursor-pointer'>
           <div className='flex items-center' onClick={() => navigate('/')}>
-            <RiJavascriptFill className='text-terminal-yellow block w-8 h-8' />
+            <RiJavascriptFill className='text-[#FFD767] block w-8 h-8' />
             <h1 className='pl-4 text-xl letter-wide font-bold'>Learn Javascript</h1>
           </div>
         </header>

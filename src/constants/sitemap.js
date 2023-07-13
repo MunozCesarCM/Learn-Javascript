@@ -2,7 +2,7 @@ export const sitemap = [
   {
     id: 'overview',
     label: 'Overview',
-    color: 'text-terminal-yellow',
+    color: 'text-[#FFD767]',
     icon: 'TbFileFilled',
   },
   {
@@ -195,6 +195,11 @@ export const sitemap = [
             {
               id: 'arithmetic-calculations',
               label: 'Arithmetic Calculations',
+              type: 'Challenge',
+            },
+            {
+              id: 'even-more-calculations',
+              label: 'Even More Calculations',
               type: 'Challenge',
             },
             {
