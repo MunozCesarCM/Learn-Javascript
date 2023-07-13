@@ -8,20 +8,15 @@ export default {
     extend: {
       colors: {
         terminal: {
-          black: '#1A1B26',
-          grey: '#313855',
-          red: '#F7768E',
-          yellow: '#FFCB6B',
-          green: '#9ECF6A',
-          blue: '#7AA2F7',
-          purple: '#C792EA',
-          white: '#C0CAF5',
+          foreground: 'var(--color-foreground)',
+          background: 'var(--color-background)',
+          header: 'var(--color-bold)',
+          red: 'var(--color-red)',
+          yellow: 'var(--color-yellow)',
+          green: 'var(--color-green)',
+          blue: 'var(--color-blue)',
+          purple: 'var(--color-purple)',
         },
-        primary: 'var(--color-primary)',
-        secondary: 'var(--color-secondary)',
-        foreground: 'var(--color-foreground)',
-        header: 'var(--color-bold)',
-        aside: 'var(--color-aside)',
       }
     },
   },
