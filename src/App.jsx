@@ -12,7 +12,7 @@ const Overview = React.lazy(() => import('./pages/Overview'));
 
 const App = () => {
   const [sidebarActive, setSidebarActive] = useState(window.innerWidth > 1024);
-  const [theme, setTheme] = useState('ayuLight');
+  const [theme, setTheme] = useState('catpuccinLight');
   const { pathname } = useLocation();
 
   useEffect(() => {
@@ -20,7 +20,7 @@ const App = () => {
   }, [pathname]);
 
   return (
-    <main className={`${theme} pb-[20vh]`}>
+    <main className={`${theme} pb-[10vh]`}>
       <SiteContext.Provider value={{ sidebarActive, setSidebarActive, theme, setTheme }}>
         <Suspense fallback={<div className='w-screen h-screen' />}>
           {pathname !== '/' && (<Sidebar />)}

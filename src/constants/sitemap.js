@@ -25,11 +25,6 @@ export const sitemap = [
               type: 'Lesson',
             },
             {
-              id: 'basic-grammar',
-              label: 'Basic Grammar',
-              type: 'Lesson',
-            },
-            {
               id: 'hello-world',
               label: 'Hello World',
               type: 'Lesson',
@@ -38,6 +33,11 @@ export const sitemap = [
               id: 'write-hello-world',
               label: 'Write a "Hello World"',
               type: 'Challenge',
+            },
+            {
+              id: 'basic-grammar',
+              label: 'Basic Grammar',
+              type: 'Lesson',
             },
             {
               id: 'comments',
@@ -85,6 +85,11 @@ export const sitemap = [
               id: 'var-keyword',
               label: 'Var Keyword',
               type: 'Lesson',
+            },
+            {
+              id: 'variables-review',
+              label: 'Variables Review',
+              type: 'Quiz',
             },
           ],
         ],

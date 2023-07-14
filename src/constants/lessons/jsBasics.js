@@ -28,7 +28,7 @@ export const jsBasicsContent = {
     ],
     [
       { type: 'hr', },
-      { type: 'p', content: 'In JavaScript, instructions are called statements and are separated by semicolons ##;## .', },
+      { type: 'p', content: 'In JavaScript, instructions are called statements and are separated by semicolons ##;##', },
       { type: 'p', content: 'A semicolon is not necessary after a statement if it is written on its own line. But if more than one statement on a line is desired, then they **must** be separated by semicolons.', },
     ],
     [
@@ -41,7 +41,7 @@ export const jsBasicsContent = {
       { type: 'p', content: 'To write the "Hello World" program, we will be using ##console.log()##.' },
     ],
     [
-      { type: 'p', content: 'All modern browsers have a web console for debugging. The console.log() method is used to write messages to these consoles. For example:' },
+      { type: 'p', content: 'All modern browsers have a web console for debugging. The ##console.log()## method is used to write messages to these consoles. For example:' },
       { type: 'code', content: 'console.log("Hello World");', required: false, },
     ],
   ],
@@ -215,6 +215,60 @@ export const jsBasicsContent = {
     [
       { type: 'p', content: 'If we run this code, it will give us the name value of ##Cesar##. In as much as this works, it is a terrible idea and not a good practice.', },
       { type: 'p', content: 'You should always declare your variables properly using the ##let##, ##const## or ##var## keywords.', },
+    ],
+  ],
+  'variables-review': [
+    [
+      { type: 'question',
+        title: 'Which JavaScript keyword is used to declare a variable that cannot be changed?',
+        questions: [
+          'value',
+          'const',
+          'let',
+          'var',
+        ],
+        correctIndex: 2,
+        required: true,
+      },
+    ],
+    [
+      { type: 'question',
+        title: 'JavaScript allows variables to be declared without using the ##var## ##let## or ##const## keywords.',
+        questions: [
+          'true',
+          'false',
+        ],
+        correctIndex: 1,
+        required: true,
+      },
+    ],
+    [
+      { type: 'p', content: 'JavaScript allows variables to be declared without using the ##var## ##let## or ##const## keywords. However, doing so can result in global scope variables, which is generally not recommended.', },
+    ],
+    [
+      { type: 'hr', },
+      { type: 'question',
+        title: 'Which of the following variable names is not valid in JavaScript?',
+        questions: [
+          'myVariable',
+          '_privateVariable',
+          '123variable',
+          '$specialVariable',
+        ],
+        correctIndex: 3,
+        required: true,
+      },
+    ],
+    [
+      { type: 'question',
+        title: 'JavaScript is a case-sensitive language, meaning that variable names ##myVariable## and ##myvariable## would be considered different.',
+        questions: [
+          'true',
+          'false',
+        ],
+        correctIndex: 1,
+        required: true,
+      },
     ],
   ],
 
@@ -393,6 +447,11 @@ export const jsBasicsContent = {
     ],
     [
       { type: 'p', content: 'Booleans are mostly used in making decisions and are one of the main types you\'ll use the most.', },
+    ],
+    [
+      { type: 'hr', },
+      { type: 'p', content: 'JavaScript allows values of other types to be converted into boolean values of ##true## or ##false##.', },
+      { type: 'p', content: 'To convert a value of another data type into a boolean value, you use the ##Boolean()## function:', },
     ],
   ],
   'assign-boolean': [

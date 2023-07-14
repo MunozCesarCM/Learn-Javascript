@@ -39,7 +39,7 @@ const Card = ({ card }) => {
   return (
     <>
       <Link to={card.id}>
-        <div className={`bg-aside relative my-4 border-2 ${getBorder(card.type)} cursor-pointer duration-100 group`}>
+        <div className={`bg-terminal-alt relative my-4 border-2 ${getBorder(card.type)} cursor-pointer duration-100 group`}>
           <div className="px-7 py-6 flex items-top justify-start space-x-6">
             {getIcon(card.type)}
             <div className="space-y-2">

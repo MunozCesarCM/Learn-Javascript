@@ -44,9 +44,7 @@ const ExecuteCode = ({ codeObject, setSolved, isActive }) => {
 
   useEffect(() => {
     if (isActive && codeObject.required) setSolved(false);
-    if (isActive && codeObject.expected == result) {
-      setSolved(true);
-    }
+    if (isActive && codeObject.expected == result) setSolved(true);
   }, [result, isActive]);
 
   return (

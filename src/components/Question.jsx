@@ -1,5 +1,6 @@
 import { useState , useEffect } from 'react';
 import { TbCheck, TbX, TbQuestionMark } from 'react-icons/tb';
+import { formatContent } from '../helpers/formatContent';
 
 const Question = ({ questionObject, setSolved, isActive }) => {
   const [selectedOption, setSelectedOption] = useState(null);
@@ -35,17 +36,17 @@ const Question = ({ questionObject, setSolved, isActive }) => {
   }
 
   useEffect(() => {
-    console.log(isActive, isCorrect);
     if (isActive && questionObject.required) setSolved(false);
     if (isActive && isCorrect) setSolved(true);
   }, [isCorrect, isActive]);
 
   return (
     <>
-      <strong>{questionObject.title}</strong>
-      <ol className="relative">
+      <strong>Question: </strong>
+      <span dangerouslySetInnerHTML={{ __html: formatContent(questionObject.title)}} />
+      <ol className="relative mt-2">
         {questionObject.questions.map((item, index) => (
-          <li key={item} className="flex items-center">
+          <li key={item} className="flex items-start">
             <input
               id={`${questionObject.title}-radio-${index}`}
               type="radio"
@@ -53,7 +54,11 @@ const Question = ({ questionObject, setSolved, isActive }) => {
               onChange={() => setSelectedOption(index)}
               className="w-4 h-4 text-terminal-blue bg-terminal-alt focus:ring-terminal-blue"
             />
-            <label htmlFor={`${questionObject.title}-radio-${index}`} className="ml-4">{item}</label>
+            <label
+              htmlFor={`${questionObject.title}-radio-${index}`}
+              className="ml-4"
+              dangerouslySetInnerHTML={{ __html: formatContent(item)}}
+            />
           </li>
         ))}
         {getButton(isCorrect)}

@@ -97,19 +97,27 @@ aside {
     color: var(--color-foreground);
     border: 1px solid var(--color-border);
     padding: 1rem 2rem;
+  }
+
+  ul {
+    list-style-type: disc;
+    list-style-position: inside;
 
     li {
       line-height: 1.75;
     }
   }
 
-  ul {
-    list-style-type: disc;
-    list-style-position: inside;
-  }
-
   ol {
     list-style-type: none;
+
+    li {
+      margin: 1em 0;
+    }
+
+    input {
+      margin-top: 4px;
+    }
   }
 
   .codeResult {
