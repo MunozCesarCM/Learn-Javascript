@@ -252,13 +252,27 @@ export const jsBasicsContent = {
   'variables-types': [
     [
       { type: 'question',
-        title: 'Lorem ipsum?',
+        title: 'Question #1',
         questions: [
-          'question 1',
-          'question 2',
-          'question 3',
-          'question 4',
+          'Option 1',
+          'Option 2',
+          'Answer',
+          'Option 4',
         ],
+        correctIndex: 3,
+        required: true,
+      },
+    ],
+    [
+      { type: 'question',
+        title: 'Question #2',
+        questions: [
+          'Answer',
+          'Option 2',
+          'Option 3',
+          'Option 4',
+        ],
+        correctIndex: 1,
         required: true,
       },
     ],
