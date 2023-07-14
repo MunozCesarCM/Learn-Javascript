@@ -102,6 +102,11 @@ export const sitemap = [
               type: 'Lesson',
             },
             {
+              id: 'variables-types',
+              label: 'Variables and Types',
+              type: 'Quiz',
+            },
+            {
               id: 'types-of-numbers',
               label: 'Types of Numbers',
               type: 'Lesson',

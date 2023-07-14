@@ -1,20 +1,16 @@
 import CodeMirror from '@uiw/react-codemirror';
 import { javascript } from '@codemirror/lang-javascript';
+import Question from '../components/Question';
 import ExecuteCode from '../components/ExecuteCode';
 import { formatContent } from './formatContent';
 import { getTheme } from '../helpers/getTheme';
 
 export const handleContentTag = (tag, setSolved, isActive) => {
 
-  if (tag.type === 'h2') {
-    return <h2 dangerouslySetInnerHTML={{ __html: formatContent(tag.content)}} />
-  }
-  if (tag.type === 'h3') {
-    return <h3 dangerouslySetInnerHTML={{ __html: formatContent(tag.content)}} />
-  }
-  if (tag.type === 'p') {
-    return <p dangerouslySetInnerHTML={{ __html: formatContent(tag.content)}} />
-  }
+  if (tag.type === 'h2') { return <h2 dangerouslySetInnerHTML={{ __html: formatContent(tag.content)}} /> }
+  if (tag.type === 'h3') { return <h3 dangerouslySetInnerHTML={{ __html: formatContent(tag.content)}} /> }
+  if (tag.type === 'p') { return <p dangerouslySetInnerHTML={{ __html: formatContent(tag.content)}} /> }
+  if (tag.type === 'hr') { return <hr className='h-px bg-neutral-400 opacity-20 border-0' /> }
   if (tag.type === 'ul') {
     return (
       <ul>
@@ -24,8 +20,12 @@ export const handleContentTag = (tag, setSolved, isActive) => {
       </ul>
     );
   }
-  if (tag.type === 'hr') {
-    return <hr className='h-px bg-neutral-400 opacity-20 border-0' />
+  if (tag.type === 'question') {
+    return <Question
+      questionObject={tag}
+      setSolved={setSolved}
+      isActive={isActive}
+    />
   }
   if (tag.type === 'snippet') {
     return <CodeMirror

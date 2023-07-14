@@ -3,30 +3,35 @@ import {
   TbSeeding,
   TbTerminal2,
   TbTargetArrow,
+  TbBulb,
   TbCircleCheckFilled,
 } from 'react-icons/tb';
 
 const getIcon = (type) => {
   if (type === 'Challenge') return <TbTerminal2 className="w-8 h-8 text-terminal-blue" />;
   if (type === 'Project') return <TbTargetArrow className="w-8 h-8 text-terminal-red" />;
+  if (type === 'Quiz') return <TbBulb className="w-8 h-8 text-terminal-purple" />;
   return <TbSeeding className="w-8 h-8 text-terminal-green" />;
 }
 
 const getBorder = (type) => {
   if (type === 'Challenge') return 'border-blue';
   if (type === 'Project') return 'border-red';
+  if (type === 'Quiz') return 'border-purple';
   return 'border-green';
 }
 
 const getText = (type) => {
   if (type === 'Challenge') return 'text-terminal-blue';
   if (type === 'Project') return 'text-terminal-red';
+  if (type === 'Quiz') return 'text-terminal-purple';
   return 'text-terminal-green';
 }
 
 const getGroupHover = (type) => {
   if (type === 'Challenge') return 'group-hover:text-terminal-blue';
   if (type === 'Project') return 'group-hover:text-terminal-red';
+  if (type === 'Quiz') return 'group-hover:text-terminal-purple';
   return 'group-hover:text-terminal-green';
 }
 

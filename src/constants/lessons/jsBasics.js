@@ -249,6 +249,20 @@ export const jsBasicsContent = {
       { type: 'code', content: 'let variable = 123;\nconsole.log(typeof(variable)); // "number"\n\nvariable = false;\nconsole.log(typeof(variable)); // "boolean"\n\nvariable = "Cesar";\nconsole.log(typeof(variable)); // "string"', required: false },
     ],
   ],
+  'variables-types': [
+    [
+      { type: 'question',
+        title: 'Lorem ipsum?',
+        questions: [
+          'question 1',
+          'question 2',
+          'question 3',
+          'question 4',
+        ],
+        required: true,
+      },
+    ],
+  ],
   'types-of-numbers': [
     [
       { type: 'p', content: 'In programming, even the decimal number system that we all know so well is more complicated than you might think.', },
