@@ -10,6 +10,7 @@ export default {
         terminal: {
           foreground: 'var(--color-foreground)',
           background: 'var(--color-background)',
+          alt: 'var(--color-aside)',
           header: 'var(--color-bold)',
           red: 'var(--color-red)',
           yellow: 'var(--color-yellow)',

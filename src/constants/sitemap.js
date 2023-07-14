@@ -107,8 +107,8 @@ export const sitemap = [
               type: 'Lesson',
             },
             {
-              id: 'variables-types',
-              label: 'Variables and Types',
+              id: 'javascript-types',
+              label: 'JavaScript Types',
               type: 'Quiz',
             },
             {
@@ -164,6 +164,11 @@ export const sitemap = [
               id: 'null-type',
               label: 'Null Data Type',
               type: 'Lesson',
+            },
+            {
+              id: 'even-more-types',
+              label: 'Even More Types',
+              type: 'Quiz',
             },
           ],
           [
