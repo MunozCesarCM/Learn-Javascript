@@ -1,0 +1,1 @@
+import{j as e}from"./index-5de3d751.js";const t=()=>e.jsx("main",{className:"bg-[#313855] text-white min-h-screen py-14",children:e.jsx("article",{className:"max-w-3xl mx-auto",children:"This the overview"})});export{t as default};
